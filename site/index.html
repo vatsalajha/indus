@@ -38,10 +38,12 @@ body{
     radial-gradient(140% 120% at 50% 120%, rgba(120,104,78,.10), transparent 55%);
   background-attachment:fixed;
 }
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.08;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;line-height:1.12;letter-spacing:.01em}
 .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
 .wrap{max-width:1080px;margin:0 auto;padding:0 30px}
-section{padding:120px 0;border-top:1px solid var(--line-soft)}
+section{padding:134px 0;border-top:1px solid var(--line-soft)}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--carnelian);margin-bottom:26px}
 
 /* carved intaglio glyph: incised groove, dark line, light on lower-right lip, shadow on upper-left */
@@ -49,8 +51,8 @@ section{padding:120px 0;border-top:1px solid var(--line-soft)}
   stroke:#39332a;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;
   overflow:visible;
   filter:
-    drop-shadow(.7px 1.1px .2px var(--ink-groove-hi))
-    drop-shadow(-.6px -.8px .35px var(--ink-groove-lo));
+    drop-shadow(.9px 1.3px .25px var(--ink-groove-hi))
+    drop-shadow(-.7px -.9px .45px var(--ink-groove-lo));
 }
 
 /* NAV */
@@ -97,7 +99,7 @@ nav .brand{color:var(--indigo);font-weight:500;letter-spacing:.22em;margin-right
 .card h3{font-size:18px;margin-bottom:8px;letter-spacing:.01em}.card p{font-size:13.5px;color:var(--indigo-soft);line-height:1.5}
 
 /* SECTION HEADERS */
-h2{font-size:clamp(30px,4.4vw,46px);color:var(--indigo);max-width:16ch}
+h2{font-size:clamp(32px,4.8vw,54px);color:var(--indigo);max-width:16ch}
 section>.wrap>p{max-width:64ch}
 
 /* GAME */
