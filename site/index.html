@@ -226,6 +226,22 @@ section>.wrap>p{max-width:64ch}
 .seal-gloss p.big{font-family:'Marcellus',serif;font-size:clamp(19px,2.6vw,24px);color:var(--indigo);margin:12px auto 0;max-width:22ch;line-height:1.35}
 .seal-gloss .honest{margin-top:16px;font-size:15px;color:var(--indigo-soft);max-width:52ch;margin-left:auto;margin-right:auto;line-height:1.6}
 @media(max-width:620px){.seal-cols{grid-template-columns:1fr}}
+.seal-pick{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.seal-pick button{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;padding:9px 14px;border:1px solid var(--line);background:var(--bone-hi);color:var(--indigo-soft);border-radius:6px;cursor:pointer;transition:.16s}
+.seal-pick button.on,.seal-pick button:hover{border-color:var(--faience);color:var(--indigo)}
+.seal-try{margin-top:40px;background:linear-gradient(176deg,var(--bone-hi),var(--bone));border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:var(--shadow-raise)}
+.seal-try h3{font-family:'Marcellus',serif;font-size:22px;color:var(--indigo);margin-bottom:6px}
+.seal-try>p{font-size:14.5px;color:var(--indigo-soft);max-width:64ch;margin-bottom:18px}
+.try-row{display:flex;flex-direction:row-reverse;gap:16px;justify-content:center;flex-wrap:wrap;padding:18px;border-radius:10px;background:linear-gradient(176deg,#F1EEE5,#E2DECF);box-shadow:var(--shadow-carve)}
+.try-sign{display:flex;flex-direction:column;align-items:center;gap:8px}
+.try-sign .glyph{width:54px;height:66px}
+.try-btns{display:flex;gap:4px}
+.try-btns button{font-family:'IBM Plex Mono',monospace;font-size:10px;padding:4px 7px;border:1px solid var(--line);background:var(--bone-hi);color:var(--indigo-soft);border-radius:4px;cursor:pointer}
+.try-btns button:hover{border-color:var(--faience);color:var(--indigo)}
+.try-sign.done .try-btns{display:none}
+.try-sign .res{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.03em;min-height:14px;text-align:center}
+.try-sign.ok .res{color:var(--faience)}.try-sign.no .res{color:var(--carnelian)}
+.try-flash{font-family:'IBM Plex Mono',monospace;font-size:12.5px;margin-top:16px;min-height:18px;line-height:1.5}
 
 /* TEN THINGS */
 .facts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
@@ -563,7 +579,8 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 <section id="seal"><div class="wrap">
 <div class="eyebrow reveal">05 · read a real seal</div>
 <h2 class="reveal">Read a real seal, as far as honesty allows.</h2>
-<p class="reveal" style="max-width:680px;margin-top:14px;color:var(--indigo-soft)">One genuine four-sign inscription from the corpus. Scroll to move through it sign by sign, right to left. For each sign, two honest columns: what the grammar lets us say, and what no one can.</p>
+<p class="reveal" style="max-width:680px;margin-top:14px;color:var(--indigo-soft)">Genuine inscriptions from the corpus. Pick one, then scroll through it sign by sign, right to left. For each sign, two honest columns: what the grammar lets us say, and what no one can.</p>
+<div class="seal-pick reveal" id="sealPick"></div>
 <div class="seal-scrolly reveal">
 <div class="seal-stage">
 <div class="seal-row" id="sealRow"></div>
@@ -571,6 +588,13 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 </div>
 <div class="seal-steps" id="sealSteps"></div>
 <div class="seal-gloss" id="sealFinal"></div>
+</div>
+<div class="seal-try reveal" id="sealTry">
+<h3>Now you try.</h3>
+<p>Here is another real inscription, read right to left. For each sign, guess its class: does it open the text, sit in the middle, or end it?</p>
+<div class="try-row" id="tryRow"></div>
+<div class="try-flash" id="tryFlash"></div>
+<div style="margin-top:14px"><button class="btn" id="tryNext" style="display:none">Another inscription</button></div>
 </div>
 </div></section>
 
@@ -789,28 +813,72 @@ rebusNext();
 // ================= READ A REAL SEAL =================
 (function(){
   const row=document.getElementById('sealRow'),steps=document.getElementById('sealSteps'),fin=document.getElementById('sealFinal');if(!row)return;
-  const seq=['P385','P122','P123','P086'];
-  const gloss={
-   P385:{can:'Opens the text. This sign begins inscriptions about 83% of the time, a text-opener that frames what follows.',cannot:'We do not know its sound, nor whether it names a category, a place, or simply marks that a text begins.'},
-   P122:{can:'A stem sign in the body, the part of the text that carries specific content, most likely a name element.',cannot:'Its phonetic value is unknown. We cannot recover the word it stood for.'},
-   P123:{can:'A second stem sign, continuing the body. The body is where each seal’s individuality lives.',cannot:'We cannot say its sound, nor whether these two stem signs form one word or two.'},
-   P086:{can:'Closes the text. It ends inscriptions and attaches after stems, the fingerprint of a grammatical suffix, like a title that terminates a name.',cannot:'We do not know its sound. “suffix” is a position in the grammar, not a pronunciation.'}
+  const slotGloss={
+   OPENER:{can:'Opens the text. Signs like this begin inscriptions far more often than chance, framing what follows.',cannot:'We do not know its sound, nor whether it names a category, a place, or simply marks that a text begins.'},
+   EARLY:{can:'An early-slot sign, often a numeral, sitting near the front of the text.',cannot:'We cannot say its sound, only its position and rough role.'},
+   NUM:{can:'A numeral-like sign, counting the stem that follows.',cannot:'We cannot say how it was pronounced.'},
+   BODY:{can:'A stem sign in the body, the part that carries the specific content, most likely a name element.',cannot:'Its phonetic value is unknown. We cannot recover the word it stood for.'},
+   RARE:{can:'A rare body sign, carrying specific content.',cannot:'We cannot say its sound.'},
+   PRESUFFIX:{can:'A pre-suffix sign, sitting just before the terminal marker.',cannot:'We do not know its sound.'},
+   SUFFIX:{can:'Closes the text. It ends inscriptions and attaches after stems, the fingerprint of a grammatical suffix, like a title that terminates a name.',cannot:'We do not know its sound. "suffix" is a position in the grammar, not a pronunciation.'}
   };
-  row.innerHTML=seq.map((id,i)=>'<div class="glyph" data-i="'+i+'">'+glyphSVG(id)+'</div>').join('');
-  const rowGlyphs=row.querySelectorAll('.glyph');
-  steps.innerHTML=seq.map((id,i)=>{const sl=GAME.signs[id].slot,gg=gloss[id];
-    return '<div class="seal-step" data-i="'+i+'"><div class="num">Sign '+(i+1)+' of '+seq.length+' · '+(i===0?'rightmost':i===seq.length-1?'leftmost':'position '+(i+1))+' · '+sl+'</div>'
-      +'<div class="glyph">'+glyphSVG(id)+'</div>'
-      +'<div class="seal-cols"><div class="seal-col can"><h5>What we can say</h5><p>'+gg.can+'</p></div>'
-      +'<div class="seal-col cannot"><h5>What we cannot</h5><p>'+gg.cannot+'</p></div></div></div>';}).join('');
-  fin.innerHTML='<div class="mono">THE ASSEMBLED STRUCTURE</div>'
-    +'<p class="big">opener + stem + stem + suffix, a structured, titled name.</p>'
-    +'<p class="honest">We can read what it <b>is</b>: its grammar, its shape, the slot each sign fills. We cannot read what it <b>sounded</b> like, no sign here is assigned a sound. Both statements are honest, and we keep them apart.</p>';
-  const setActive=i=>rowGlyphs.forEach((g,j)=>{g.classList.toggle('active',j===i);g.classList.toggle('done',j<i);});
-  setActive(0);
-  const stepEls=steps.querySelectorAll('.seal-step');
-  const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=+e.target.dataset.i;stepEls.forEach(s=>s.classList.toggle('on',s===e.target));setActive(i);}}),{rootMargin:'-45% 0px -45% 0px',threshold:0});
-  stepEls.forEach(s=>so.observe(s));
+  const override={
+   P385:{can:'Opens the text. This diamond sign begins inscriptions about 83% of the time.'},
+   P050:{can:'This is the fish. It sits in the body as a counted noun. Tempting to read as a star, but its position says commodity. See The Trap.'},
+   P086:{can:'Closes the text. This tree sign ends inscriptions, an affix that terminates the name.'}
+  };
+  const nm={OPENER:'opener',EARLY:'numeral',NUM:'numeral',BODY:'stem',RARE:'stem',PRESUFFIX:'pre-suffix',SUFFIX:'suffix'};
+  const slotOfId=id=>GAME.signs[id]?GAME.signs[id].slot:'BODY';
+  const seals=[
+   {seq:['P385','P122','P123','P086'],label:'a titled name'},
+   {seq:['P378','P120','P092','P050','P217'],label:'a numeral and a fish'},
+   {seq:['P316','P147','P217'],label:'a short one'},
+   {seq:['P385','P122','P060','P332','P324'],label:'with a pre-suffix'}
+  ];
+  let obs=null;
+  function build(seq){
+    row.innerHTML=seq.map((id,i)=>'<div class="glyph" data-i="'+i+'">'+glyphSVG(id)+'</div>').join('');
+    const rowGlyphs=row.querySelectorAll('.glyph');
+    steps.innerHTML=seq.map((id,i)=>{const sl=slotOfId(id),g=Object.assign({},slotGloss[sl]||slotGloss.BODY,override[id]||{});
+      return '<div class="seal-step" data-i="'+i+'"><div class="num">Sign '+(i+1)+' of '+seq.length+' · '+(i===0?'rightmost':i===seq.length-1?'leftmost':'position '+(i+1))+' · '+sl+'</div>'
+        +'<div class="glyph">'+glyphSVG(id)+'</div>'
+        +'<div class="seal-cols"><div class="seal-col can"><h5>What we can say</h5><p>'+g.can+'</p></div>'
+        +'<div class="seal-col cannot"><h5>What we cannot</h5><p>'+g.cannot+'</p></div></div></div>';}).join('');
+    const gl=seq.map(id=>nm[slotOfId(id)]||'stem').join(' + ');
+    fin.innerHTML='<div class="mono">THE ASSEMBLED STRUCTURE</div><p class="big">'+gl+', a structured record read right to left.</p>'
+      +'<p class="honest">We can read what it <b>is</b>: its grammar, its shape, the slot each sign fills. We cannot read what it <b>sounded</b> like, no sign here is assigned a sound. Both statements are honest, and we keep them apart.</p>';
+    const setActive=i=>rowGlyphs.forEach((g,j)=>{g.classList.toggle('active',j===i);g.classList.toggle('done',j<i);});
+    setActive(0);
+    if(obs)obs.disconnect();
+    const stepEls=steps.querySelectorAll('.seal-step');
+    obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=+e.target.dataset.i;stepEls.forEach(s=>s.classList.toggle('on',s===e.target));setActive(i);}}),{rootMargin:'-45% 0px -45% 0px',threshold:0});
+    stepEls.forEach(s=>obs.observe(s));
+  }
+  const pick=document.getElementById('sealPick');
+  pick.innerHTML=seals.map((s,i)=>'<button data-i="'+i+'"'+(i===0?' class="on"':'')+'>'+s.label+'</button>').join('');
+  pick.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{pick.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');build(seals[+b.dataset.i].seq);document.getElementById('seal').scrollIntoView({behavior:'smooth'});}));
+  build(seals[0].seq);
+
+  // ---- now you try ----
+  const tryRow=document.getElementById('tryRow'),tryFlash=document.getElementById('tryFlash'),tryNext=document.getElementById('tryNext');
+  const tryPool=[['P144','P316','P147','P217'],['P145','P050','P175','P324'],['P092','P050','P217']].filter(s=>s.every(id=>GLYPHS[id]));
+  const bin=id=>{const sl=slotOfId(id);return sl==='OPENER'?'opener':sl==='SUFFIX'?'suffix':'middle';};
+  let ti=0;
+  function buildTry(){
+    const seq=tryPool[ti%tryPool.length];let done=0,score=0;
+    tryFlash.textContent='';tryNext.style.display='none';
+    tryRow.innerHTML=seq.map((id,i)=>'<div class="try-sign" data-truth="'+bin(id)+'">'+glyphSVG(id)
+      +'<div class="try-btns"><button data-g="opener">opener</button><button data-g="middle">middle</button><button data-g="suffix">suffix</button></div><div class="res"></div></div>').join('');
+    tryRow.querySelectorAll('.try-sign').forEach(sg=>sg.querySelectorAll('.try-btns button').forEach(btn=>btn.addEventListener('click',()=>{
+      if(sg.classList.contains('done'))return;
+      const truth=sg.dataset.truth,ok=btn.dataset.g===truth;
+      sg.classList.add('done',ok?'ok':'no');sg.querySelector('.res').textContent=ok?'✓ '+truth:'✗ it is '+truth;
+      done++;if(ok)score++;
+      if(done===seq.length){tryFlash.style.color=score===seq.length?'var(--faience)':'var(--indigo-soft)';tryFlash.textContent='You placed '+score+' of '+seq.length+' correctly. That skeleton, opener then stem then suffix, is the grammar you just read.';tryNext.style.display='inline-block';}
+    })));
+  }
+  tryNext.addEventListener('click',()=>{ti++;buildTry();});
+  buildTry();
 })();
 
 // ================= TEN THINGS =================
