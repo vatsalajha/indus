@@ -231,6 +231,7 @@ section>.wrap>p{max-width:64ch}
 .facts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
 .fact{background:linear-gradient(176deg,var(--bone-hi),var(--bone));border:1px solid var(--line);border-radius:12px;padding:26px 24px;box-shadow:var(--shadow-raise);position:relative;overflow:hidden}
 .fact::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--carnelian),transparent 70%)}
+.fact img{width:calc(100% + 48px);margin:-26px -24px 16px;display:block;height:154px;object-fit:cover;border-bottom:1px solid var(--line)}
 .fact .n{font-family:'Marcellus',serif;font-size:32px;color:var(--carnelian);opacity:.55;line-height:1}
 .fact h4{font-family:'Marcellus',serif;font-size:18.5px;margin:6px 0 8px;color:var(--indigo);line-height:1.25}
 .fact p{font-size:14px;line-height:1.62;color:var(--indigo-soft)}
@@ -343,7 +344,7 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 
 <nav><div class="wrap">
 <span class="brand">INDUS ENGINE</span>
-<a href="#why">Approach</a><a href="#math">Method</a><a href="#play">Play</a><a href="#games">Games</a><a href="#wall">The Wall</a><a href="#rebus">The Trap</a><a href="#seal">Read a Seal</a><a href="#facts">Ten Things</a><a href="#ledger">Ledger</a><a href="#story">Story</a><a href="#timeline">Timeline</a>
+<a href="#why">Approach</a><a href="#math">Method</a><a href="#play">Play</a><a href="#games">Games</a><a href="#wall">The Wall</a><a href="#rebus">The Trap</a><a href="#seal">Read a Seal</a><a href="#facts">Facts</a><a href="#ledger">Ledger</a><a href="#story">Story</a><a href="#timeline">Timeline</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -505,8 +506,8 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 </div></section>
 
 <section id="facts"><div class="wrap">
-<div class="eyebrow reveal">06 · ten things</div>
-<h2 class="reveal">Ten things that are true and strange.</h2>
+<div class="eyebrow reveal">06 · the strange facts</div>
+<h2 class="reveal">Small, strange, and true.</h2>
 <p class="reveal" style="max-width:680px;margin-top:14px;color:var(--indigo-soft)">Not "the Indus were advanced." Specific, checkable, and surprising, the texture of a civilization we can measure but not yet read.</p>
 <div class="facts-grid reveal" id="factsGrid"></div>
 </div></section>
@@ -725,9 +726,15 @@ rebusNext();
    {t:'Half the signs appear only once.',p:'Of more than 400 signs, a large fraction are hapaxes, used a single time in the entire known corpus. You cannot decipher a sign you only ever see once. This is the mathematical heart of why it stays unread.'},
    {t:'The seals are carved in mirror image.',p:'They were made to STAMP, so the carving runs backwards, every seal is a negative, meant to be read only in the clay impression it leaves. The museum objects are, in a sense, unreadable by design; the readable version was the disposable clay tag.'},
    {t:'No kings. No cartouches. No Ptolemy.',p:'Every script ever cracked had a royal name to spell out, that is how Egyptian fell. The Indus gives us no rulers, no monuments boasting conquests, no obvious names to anchor sounds. The absence of ego is why the code holds.'},
-   {t:'The whole corpus would fit in a pamphlet.',p:'Around 4,000 to 5,000 short texts, averaging five signs each. The entire written output of a civilization of a million people, across 700 years, is shorter than a novella. There may simply not be enough text left to ever read it.'}
+   {t:'The whole corpus would fit in a pamphlet.',p:'Around 4,000 to 5,000 short texts, averaging five signs each. The entire written output of a civilization of a million people, across 700 years, is shorter than a novella. There may simply not be enough text left to ever read it.'},
+   {t:'A living cousin still speaks this way.',p:'Gondi, a Dravidian language spoken by millions in central India today, stacks its grammatical endings as separable pieces in a fixed order, the same structural signature the Indus grammar shows. The family the seals resemble is not extinct.'},
+   {t:'Every brick obeyed the same ratio.',img:'granary-platforms.jpg',alt:'Reconstructed brick working platforms of a granary',p:'Indus fired bricks hold a consistent 1:2:4 proportion, thickness to width to length, across cities hundreds of miles apart and centuries apart. A shared building standard, enforced without a single readable memo.'},
+   {t:'They waterproofed a pool with tar.',img:'great-bath.jpg',alt:'Reconstructed Great Bath, a sunken brick tank with a colonnade',p:'The Great Bath of Mohenjo-daro was a watertight sunken tank, its fitted bricks sealed with a layer of bitumen, built to hold water on purpose in the third millennium BCE.'},
+   {t:'Nearly every house had a drain.',img:'street-drain.jpg',alt:'Reconstructed street with a covered brick drainage channel',p:'Covered brick drainage channels ran along the streets, with removable inspection covers, fed by outlets from the houses. Urban sanitation at this scale is rare anywhere in the ancient world.'},
+   {t:'One city hung a signboard of ten signs.',img:'city-gateway.jpg',alt:'Reconstructed city gateway with a large Indus signboard',p:'At Dholavira, ten large Indus signs were set in white gypsum on a wooden board above a gateway, an inscription meant to be read from a distance. We still cannot say what it announced.'},
+   {t:'Sumer called them Meluhha.',img:'dockyard-quiet.jpg',alt:'Reconstructed dockyard basin with moored boats',p:'Mesopotamian records name a distant trading partner, Meluhha, widely identified with the Indus. Their carnelian beads and timber reached Sumer, and Akkadian texts even mention Meluhhan ships and an interpreter.'}
   ];
-  grid.innerHTML=facts.map((f,i)=>'<div class="fact"><div class="n">'+String(i+1).padStart(2,'0')+'</div><h4>'+f.t+'</h4><p>'+f.p+'</p></div>').join('');
+  grid.innerHTML=facts.map((f,i)=>'<div class="fact">'+(f.img?'<img src="assets/img/'+f.img+'" loading="lazy" alt="'+f.alt+'">':'')+'<div class="n">'+String(i+1).padStart(2,'0')+'</div><h4>'+f.t+'</h4><p>'+f.p+'</p></div>').join('');
 })();
 
 // ================= TIMELINE =================
