@@ -168,31 +168,37 @@ section>.wrap>p{max-width:64ch}
 }
 @media(max-width:520px){.cards{grid-template-columns:1fr}}
 
-/* PARADIGM SORTER */
-.sorter{background:linear-gradient(176deg,var(--bone-hi),var(--bone));border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:var(--shadow-raise);margin-top:34px}
-.sorter-hud{display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--indigo-soft);margin-bottom:14px;letter-spacing:.04em;flex-wrap:wrap;gap:12px}
-.sorter-hud b{font-family:'Marcellus',serif;font-size:18px;color:var(--indigo);margin-left:6px}
-.sort-field{position:relative;height:280px;border-radius:10px;background:linear-gradient(176deg,#E4E0D4,#DAD5C6);box-shadow:var(--shadow-carve);overflow:hidden;touch-action:none}
-.faller{position:absolute;left:50%;top:0;transform:translateX(-50%);width:62px;height:76px;display:flex;align-items:center;justify-content:center;background:linear-gradient(174deg,#F1EEE5,#E3DFD0);border:1px solid #D3CDBB;border-radius:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 4px 10px rgba(34,30,22,.18);cursor:grab;touch-action:none;user-select:none}
-.faller svg{width:68%;height:68%;pointer-events:none}
-.faller.locking{border-color:var(--faience);animation:lockGlow .55s ease forwards}
-@keyframes lockGlow{0%{box-shadow:0 0 0 0 rgba(46,109,100,.55),inset 0 1px 0 rgba(255,255,255,.6)}100%{box-shadow:0 0 0 16px rgba(46,109,100,0),inset 0 1px 0 rgba(255,255,255,.6)}}
-.faller.wrong{border-color:var(--carnelian);animation:shudder .4s}
-.bins{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
-.bin{padding:18px 12px;border-radius:10px;border:2px dashed #CBC5B4;background:linear-gradient(176deg,#EEEBE1,#E1DDCE);text-align:center;cursor:pointer;transition:border-color .18s,background .18s}
-.bin:hover,.bin.over{border-color:var(--faience);background:linear-gradient(176deg,#EDEBDF,#E4E7D9)}
-.bin h4{font-family:'Marcellus',serif;font-size:16px;margin-bottom:3px;color:var(--indigo)}
-.bin small{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--indigo-soft);letter-spacing:.05em;display:block}
-.bin .cnt{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--faience);margin-top:7px;min-height:14px}
-.sort-flash{font-family:'IBM Plex Mono',monospace;font-size:12.5px;min-height:20px;margin-top:12px;letter-spacing:.02em}
-.sort-toggle{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--indigo-soft)}
-.sort-toggle button{font-family:inherit;font-size:11px;background:transparent;border:1px solid var(--line);color:var(--indigo-soft);border-radius:4px;padding:3px 9px;cursor:pointer;margin-left:5px}
-.sort-toggle button.on{background:var(--indigo);color:var(--bone-hi);border-color:var(--indigo)}
-.sorter-reveal{display:none;background:linear-gradient(168deg,#26344F,#1B2740);color:#DEDCD2;border-radius:14px;padding:40px;text-align:center;margin-top:18px;box-shadow:0 30px 60px -30px rgba(20,28,46,.6)}
-.sorter-reveal h3{font-family:'Marcellus',serif;color:#9FD4CB;font-size:clamp(22px,3vw,28px);margin-bottom:14px}
-.sorter-reveal p{max-width:62ch;margin:0 auto 6px;font-weight:300;line-height:1.7;color:#DEDCD2}
-.sorter-reveal .btn{margin-top:18px;border-color:#9FD4CB;color:#9FD4CB}
-.sorter-reveal .btn:hover{background:#9FD4CB;color:#1B2740}
+/* SEE IT YOURSELF: three games */
+.game .gtag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--carnelian);margin-bottom:8px}
+.game .gh{font-family:'Marcellus',serif;font-size:22px;color:var(--indigo);margin-bottom:6px}
+.game .gwhy{font-size:14px;color:var(--indigo-soft);font-style:italic;margin-bottom:16px;max-width:62ch}
+.game+.game{margin-top:22px}
+.gbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.greveal{margin-top:16px;font-size:15px;line-height:1.65;color:var(--indigo)}
+.greveal.on{background:rgba(46,109,100,.07);border:1px solid rgba(46,109,100,.28);border-radius:10px;padding:18px}
+.greveal.miss.on{background:rgba(170,74,40,.07);border-color:rgba(170,74,40,.3)}
+.greveal a{color:var(--faience)}
+.dir-strip{display:flex;gap:10px;justify-content:center;padding:22px;border-radius:10px;background:linear-gradient(176deg,#F1EEE5,#E2DECF);border:1px solid #D3CDBB;box-shadow:var(--shadow-carve);overflow-x:auto}
+.dir-strip .glyph{width:56px;height:68px;flex:0 0 auto;transition:transform .5s ease,width .5s ease,opacity .5s ease}
+.dir-strip .glyph.cramp{width:32px;transform:scaleX(.55);opacity:.85}
+.hapax-hud{display:flex;gap:28px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--indigo-soft);margin-bottom:14px}
+.hapax-hud b{font-family:'Marcellus',serif;font-size:18px;color:var(--indigo);margin-left:6px}
+.hapax-wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:8px;padding:16px;border-radius:10px;background:linear-gradient(176deg,#E4E0D4,#DAD5C6);box-shadow:var(--shadow-carve)}
+.hap-tile{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(174deg,#F1EEE5,#E3DFD0);border:1px solid #D3CDBB;border-radius:6px;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.hap-tile svg{width:64%;height:64%;pointer-events:none}
+.hap-tile:hover{transform:translateY(-2px);box-shadow:0 6px 14px -6px rgba(34,30,22,.4)}
+.hap-tile.studied{border-color:var(--faience);box-shadow:inset 0 0 0 2px rgba(46,109,100,.3)}
+.hap-tile.shatter{animation:shatter .5s forwards;pointer-events:none}
+@keyframes shatter{60%{transform:scale(1.1) rotate(4deg)}100%{transform:scale(.15) rotate(-18deg);opacity:0}}
+.lang-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.lang-card{background:linear-gradient(176deg,var(--bone-hi),var(--bone));border:1px solid var(--line);border-radius:10px;padding:20px;text-align:center}
+.lang-card h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--indigo-soft);margin-bottom:12px}
+.lang-word{font-family:'Marcellus',serif;font-size:26px;color:var(--indigo);letter-spacing:.02em;min-height:34px}
+.lang-word .suf{color:var(--carnelian)}
+.lang-word .suf2{color:var(--faience)}
+.lang-cap{font-size:13px;color:var(--indigo-soft);margin-top:10px;min-height:40px;line-height:1.5}
+.lang-card .btn{margin-top:12px;font-size:11px;padding:8px 14px}
+@media(max-width:640px){.lang-pair{grid-template-columns:1fr}}
 
 /* READ A REAL SEAL, scrollytelling */
 .seal-scrolly{margin-top:34px;position:relative}
@@ -307,7 +313,7 @@ section>.wrap>p{max-width:64ch}
 .mbar.shuf .bar{background:linear-gradient(180deg,var(--carnelian-lo),var(--carnelian))}
 .mbar .val{font-family:'Marcellus',serif;font-size:24px;color:var(--indigo);margin-bottom:6px}
 .mbar .cap{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--indigo-soft);margin-top:8px;text-align:center}
-@media(max-width:820px){.sorter{padding:22px}.sort-field{height:220px}.ledger{padding:28px 22px}.tl-take{padding:24px}.genetics{padding:24px}.approach-grid{grid-template-columns:1fr}}
+@media(max-width:820px){.ledger{padding:28px 22px}.tl-take{padding:24px}.genetics{padding:24px}.approach-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.seal-strip .glyph,.slotband,.wall .above .stone,.seal-row .glyph,.seal-step{opacity:1!important;transform:none!important;filter:none!important}}
 </style>
 <script type="application/ld+json">
@@ -324,7 +330,7 @@ section>.wrap>p{max-width:64ch}
 
 <nav><div class="wrap">
 <span class="brand">INDUS ENGINE</span>
-<a href="#why">Approach</a><a href="#math">Method</a><a href="#play">Play</a><a href="#sorter">Sorter</a><a href="#wall">The Wall</a><a href="#rebus">The Trap</a><a href="#seal">Read a Seal</a><a href="#facts">Ten Things</a><a href="#ledger">Ledger</a><a href="#story">Story</a><a href="#timeline">Timeline</a>
+<a href="#why">Approach</a><a href="#math">Method</a><a href="#play">Play</a><a href="#games">Games</a><a href="#wall">The Wall</a><a href="#rebus">The Trap</a><a href="#seal">Read a Seal</a><a href="#facts">Ten Things</a><a href="#ledger">Ledger</a><a href="#story">Story</a><a href="#timeline">Timeline</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -389,28 +395,47 @@ section>.wrap>p{max-width:64ch}
 </div>
 </div></section>
 
-<section id="sorter"><div class="wrap">
-<div class="eyebrow reveal">02 · the paradigm sorter</div>
-<h2 class="reveal">Sort the signs. Rediscover the classes.</h2>
-<p class="reveal" style="max-width:680px;margin-top:14px;color:var(--indigo-soft)">Signs drift down at your pace, no clock. Drop each into the class where it belongs: signs that <b>open</b> texts, the <b>middle</b> stem signs, and the <b>suffixes</b> that end them. Get it wrong and the real class is revealed. Sort about fifteen and see what you have built.</p>
-<div class="sorter reveal" id="sorterBox">
-<div class="sorter-hud">
-<div>sorted<b id="sortN">0 / 15</b> &nbsp;·&nbsp; correct<b id="sortC">0</b></div>
-<div class="sort-toggle" id="sorterSpeed">drift<button data-s="0.5">calm</button><button data-s="1" class="on">gentle</button><button data-s="1.9">brisk</button></div>
+<section id="games"><div class="wrap">
+<div class="eyebrow reveal">02 · see it for yourself</div>
+<h2 class="reveal">Three ways to test the evidence by hand.</h2>
+<p class="reveal" style="max-width:680px;margin-top:14px;color:var(--indigo-soft)">Each one teaches a single real thing about the script, and each opens with why it matters. No prior knowledge needed. Nothing here assigns a sound to any sign.</p>
+
+<div class="game reveal" id="dirGame">
+<p class="gtag">game one · direction detective</p>
+<h3 class="gh">Which way does this seal read?</h3>
+<p class="gwhy">Why it matters: no one told us the reading direction. We had to prove it from the seals themselves.</p>
+<div class="dir-strip" id="dirStrip"></div>
+<div class="gbtns" id="dirBtns">
+<button class="btn" onclick="dirGuess('ltr')">Reads left to right</button>
+<button class="btn" onclick="dirGuess('rtl')">Reads right to left</button>
 </div>
-<div class="sort-field" id="sortField"></div>
-<div class="bins" id="sorterBins">
-<div class="bin" data-bin="OPENER"><h4>Opener</h4><small>starts texts</small><div class="cnt" id="cntOPENER">0</div></div>
-<div class="bin" data-bin="MIDDLE"><h4>Middle</h4><small>stem / body</small><div class="cnt" id="cntMIDDLE">0</div></div>
-<div class="bin" data-bin="SUFFIX"><h4>Suffix</h4><small>ends texts</small><div class="cnt" id="cntSUFFIX">0</div></div>
+<div class="greveal" id="dirReveal"></div>
 </div>
-<div class="sort-flash" id="sortFlash"></div>
-<div class="sorter-reveal" id="sorterReveal">
-<h3>You just rediscovered the functional classes of the Indus script.</h3>
-<p>You placed <b id="sortScore">·</b> correctly. These are the same functional classes Mahadevan found by hand in 1977, and that our algorithm recovered, unsupervised, in 2026. Opener, middle, suffix: the skeleton of the grammar, visible without reading a single sound.</p>
-<button class="btn" id="sortRestart">Sort again</button>
+
+<div class="game reveal" id="hapaxGame">
+<p class="gtag">game two · the hapax wall</p>
+<h3 class="gh">Try to read the sign inventory.</h3>
+<p class="gwhy">Why it matters: you cannot decipher a symbol you only ever see once.</p>
+<div class="hapax-hud"><span>signs you could study<b id="hapStudied">0</b></span><span>lost to hapaxes<b id="hapLost">0</b></span></div>
+<div class="hapax-wall" id="hapaxWall"></div>
+<div class="greveal" id="hapaxReveal"></div>
 </div>
+
+<div class="game reveal" id="langGame">
+<p class="gtag">game three · the language detective</p>
+<h3 class="gh">What kind of language leaves this fingerprint?</h3>
+<p class="gwhy">Why it matters: the way a language builds its word-endings is a fingerprint we can read even without knowing a single sound.</p>
+<div class="lang-pair">
+<div class="lang-card" id="langA"></div>
+<div class="lang-card" id="langB"></div>
 </div>
+<div id="langStep2" style="display:none;margin-top:16px">
+<p style="font-size:14px;color:var(--indigo-soft)">Now the Indus: its grammatical markers stack as separable units in a fixed slot order, and the terminal set is small. Which language is it like?</p>
+<div class="gbtns"><button class="btn" onclick="langPlace('a')">Like A, fused</button><button class="btn" onclick="langPlace('b')">Like B, stacked</button></div>
+</div>
+<div class="greveal" id="langReveal"></div>
+</div>
+
 </div></section>
 
 <section id="wall"><div class="wrap">
@@ -576,59 +601,65 @@ const rebusSteps=[
 function rebusNext(){const s=rebusSteps[rebusStep];document.getElementById('rebusText').innerHTML=s.t;document.getElementById('rebusBtn').textContent=s.btn;const st=document.getElementById('rebusStamp');if(s.stamp==='show'){st.className='stamp show';st.textContent='DECODED';}else if(s.stamp==='break'){st.className='stamp show broken';st.textContent='DECODED';}else if(rebusStep===0){st.className='stamp';}rebusStep=(rebusStep+1)%rebusSteps.length;}
 rebusNext();
 
-// ================= PARADIGM SORTER =================
+// ================= GAME ONE: DIRECTION DETECTIVE =================
 (function(){
-  const field=document.getElementById('sortField');if(!field)return;
-  const pool=Object.keys(GLYPHS).filter(id=>id!=='P002'&&GAME.signs[id]);
-  const binOf=id=>{const sl=GAME.signs[id].slot;return sl==='OPENER'?'OPENER':sl==='SUFFIX'?'SUFFIX':'MIDDLE';};
-  const label=b=>b==='OPENER'?'it opens texts':b==='SUFFIX'?'it ends texts':'a stem / body sign';
-  const ROUNDS=15;
-  let speed=1,queue=[],idx=0,correct=0,active=null,y=0,raf=null,busy=false,dragging=false;
-  const flash=document.getElementById('sortFlash');
-  const counts={OPENER:0,MIDDLE:0,SUFFIX:0};
-  function buildQueue(){
-    const byBin={OPENER:[],MIDDLE:[],SUFFIX:[]};pool.forEach(id=>byBin[binOf(id)].push(id));
-    const pick=(arr,n)=>{const a=[...arr],o=[];while(o.length<n&&a.length)o.push(a.splice(Math.floor(Math.random()*a.length),1)[0]);return o;};
-    let q=[...pick(byBin.OPENER,3),...pick(byBin.SUFFIX,4),...pick(byBin.MIDDLE,8)];
-    while(q.length<ROUNDS)q.push(pool[Math.floor(Math.random()*pool.length)]);
-    q=q.slice(0,ROUNDS);
-    for(let i=q.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[q[i],q[j]]=[q[j],q[i]];}
-    return q;
-  }
-  function spawn(){busy=false;if(idx>=ROUNDS){finish();return;}active=queue[idx];y=0;
-    field.innerHTML='<div class="faller" id="faller">'+glyphSVG(active)+'</div>';
-    attachDrag(document.getElementById('faller'));cancelAnimationFrame(raf);drift();}
-  function drift(){const el=document.getElementById('faller');if(!el||busy||dragging)return;
-    const max=field.clientHeight-el.offsetHeight-6;
-    if(y<max){y+=0.4*speed;el.style.top=y.toFixed(1)+'px';raf=requestAnimationFrame(drift);}else{el.style.top=max+'px';}}
-  function sort(bin){if(!active||busy)return;busy=true;cancelAnimationFrame(raf);
-    const truth=binOf(active),el=document.getElementById('faller'),sign=active;
-    if(bin===truth){correct++;counts[bin]++;document.getElementById('cnt'+bin).textContent=counts[bin];
-      if(el)el.classList.add('locking');flash.style.color='var(--faience)';flash.textContent='✓ '+sign+', '+label(truth)+'.';}
-    else{if(el)el.classList.add('wrong');flash.style.color='var(--carnelian)';flash.textContent='✗ '+sign+' belongs in '+truth+', '+label(truth)+'.';}
-    active=null;idx++;document.getElementById('sortN').textContent=idx+' / '+ROUNDS;document.getElementById('sortC').textContent=correct;
-    setTimeout(spawn,700);}
-  function finish(){field.innerHTML='';active=null;document.getElementById('sortScore').textContent=correct+' of '+ROUNDS;document.getElementById('sorterReveal').style.display='block';}
-  function restart(){idx=0;correct=0;counts.OPENER=counts.MIDDLE=counts.SUFFIX=0;
-    ['OPENER','MIDDLE','SUFFIX'].forEach(b=>document.getElementById('cnt'+b).textContent='0');
-    document.getElementById('sorterReveal').style.display='none';flash.textContent='';
-    document.getElementById('sortN').textContent='0 / '+ROUNDS;document.getElementById('sortC').textContent='0';queue=buildQueue();spawn();}
-  function attachDrag(el){if(!el)return;
-    el.addEventListener('pointerdown',e=>{if(busy)return;dragging=true;try{el.setPointerCapture(e.pointerId);}catch(_){}cancelAnimationFrame(raf);el.style.cursor='grabbing';e.preventDefault();});
-    el.addEventListener('pointermove',e=>{if(!dragging)return;const fr=field.getBoundingClientRect();
-      el.style.left=Math.max(0,Math.min(fr.width,e.clientX-fr.left))+'px';
-      el.style.top=Math.max(0,Math.min(fr.height-el.offsetHeight,e.clientY-fr.top-el.offsetHeight/2))+'px';el.style.transform='translateX(-50%)';
-      document.querySelectorAll('#sorterBins .bin').forEach(b=>{const r=b.getBoundingClientRect();b.classList.toggle('over',e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom);});});
-    el.addEventListener('pointerup',e=>{if(!dragging)return;dragging=false;el.style.cursor='grab';
-      const pe=el.style.pointerEvents;el.style.pointerEvents='none';const t=document.elementFromPoint(e.clientX,e.clientY);el.style.pointerEvents=pe;
-      const bin=t&&t.closest?t.closest('.bin'):null;document.querySelectorAll('#sorterBins .bin').forEach(b=>b.classList.remove('over'));
-      if(bin)sort(bin.dataset.bin);else drift();});}
-  document.querySelectorAll('#sorterBins .bin').forEach(b=>b.addEventListener('click',()=>{if(!dragging)sort(b.dataset.bin);}));
-  document.querySelectorAll('#sorterSpeed button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('#sorterSpeed button').forEach(x=>x.classList.remove('on'));btn.classList.add('on');speed=parseFloat(btn.dataset.s);}));
-  document.getElementById('sortRestart').addEventListener('click',restart);
-  let started=false;
-  const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!started){started=true;restart();so.disconnect();}}),{threshold:.25});
-  so.observe(document.getElementById('sorter'));
+  const strip=document.getElementById('dirStrip');if(!strip)return;
+  const seqs=GAME.valid_sequences.filter(s=>s.seq.every(id=>GLYPHS[id])).map(s=>s.seq);
+  let di=0;
+  function render(cramp){const seq=seqs[di%seqs.length];
+    strip.innerHTML=seq.map((id,i)=>`<div class="glyph${cramp&&i<2?' cramp':''}">${glyphSVG(id)}</div>`).join('');}
+  window.dirGuess=function(dir){render(true);
+    const r=document.getElementById('dirReveal'),right=dir==='rtl';
+    r.className='greveal on'+(right?'':' miss');
+    r.innerHTML=(right?'<b>Correct.</b> ':'<b>Not quite. It reads right to left.</b> ')
+      +'Here is how we know, with no one to tell us: on real seals the leftmost signs are often cramped or pushed onto a second line, the way handwriting crowds the left margin. The carver began at the right and ran out of room on the left. That crowding is the proof. '
+      +'<button class="btn" style="margin-top:12px" onclick="dirNext()">Another seal</button>';
+    document.getElementById('dirBtns').style.opacity=.4;};
+  window.dirNext=function(){di++;render(false);const r=document.getElementById('dirReveal');r.className='greveal';r.innerHTML='';document.getElementById('dirBtns').style.opacity=1;};
+  render(false);
+})();
+
+// ================= GAME TWO: HAPAX WALL =================
+(function(){
+  const wall=document.getElementById('hapaxWall');if(!wall)return;
+  const keys=Object.keys(GLYPHS).filter(k=>k!=='P002');
+  const N=72;let seed=20260720;const rnd=()=>{seed=(seed*1103515245+12345)&0x7fffffff;return seed/0x7fffffff;};
+  let studied=0,lost=0,revealed=false;
+  const tiles=[];for(let i=0;i<N;i++)tiles.push({id:keys[i%keys.length],hapax:rnd()<0.5});
+  wall.innerHTML=tiles.map((t,i)=>`<div class="hap-tile" data-i="${i}">${glyphSVG(t.id)}</div>`).join('');
+  const rev=document.getElementById('hapaxReveal');
+  wall.querySelectorAll('.hap-tile').forEach(el=>el.addEventListener('click',()=>{
+    if(el.classList.contains('studied')||el.classList.contains('shatter'))return;
+    const t=tiles[+el.dataset.i];
+    if(t.hapax){el.classList.add('shatter');lost++;document.getElementById('hapLost').textContent=lost;}
+    else{el.classList.add('studied');studied++;document.getElementById('hapStudied').textContent=studied;}
+    if(!revealed&&(studied+lost)>=8){revealed=true;rev.className='greveal on';
+      rev.innerHTML='Roughly half the signs are like this. This is the mathematical ceiling. It is not that we are not clever enough. There may simply not be enough text left. This wall stands in for the real inventory, where about half of the 400 plus known signs appear only once in the entire corpus.';}
+  }));
+})();
+
+// ================= GAME THREE: LANGUAGE DETECTIVE =================
+(function(){
+  const A=document.getElementById('langA'),B=document.getElementById('langB');if(!A)return;
+  const aForms=[{w:'tak<span class="suf">us</span>',c:'"one". The ending is a single blob.'},
+                {w:'tak<span class="suf">orum</span>',c:'"of many". A different blob, changed as a whole for number and case at once.'},
+                {w:'tak<span class="suf">is</span>',c:'"to one". Again one fused ending. You cannot peel it apart.'}];
+  const bForms=[{w:'tak',c:'the bare stem.'},
+                {w:'tak<span class="suf">i</span>',c:'add one piece for plural. It is separable.'},
+                {w:'tak<span class="suf">i</span><span class="suf2">na</span>',c:'stack a second piece for case, in fixed order. You can peel each off.'}];
+  let ai=0,bi=0;
+  A.innerHTML='<h4>Language A</h4><div class="lang-word" id="awd"></div><div class="lang-cap" id="acap"></div><button class="btn" onclick="langPoke(\'a\')">Change its ending</button>';
+  B.innerHTML='<h4>Language B</h4><div class="lang-word" id="bwd"></div><div class="lang-cap" id="bcap"></div><button class="btn" onclick="langPoke(\'b\')">Add a piece</button>';
+  function draw(){document.getElementById('awd').innerHTML=aForms[ai].w;document.getElementById('acap').textContent=aForms[ai].c;
+    document.getElementById('bwd').innerHTML=bForms[bi].w;document.getElementById('bcap').textContent=bForms[bi].c;}
+  window.langPoke=function(w){if(w==='a')ai=(ai+1)%aForms.length;else bi=(bi+1)%bForms.length;draw();
+    if(ai>0&&bi>0)document.getElementById('langStep2').style.display='block';};
+  window.langPlace=function(pick){const r=document.getElementById('langReveal'),b=pick==='b';
+    r.className='greveal on'+(b?'':' miss');
+    r.innerHTML=(b?'<b>You saw it yourself.</b> Indus stacks like Language B. ':'<b>The data shows it stacks, like Language B.</b> ')
+     +'On a stacking test measured against gold Tamil and gold Vedic Sanskrit, Vedic never stacks separable grammatical pieces (rate 0.00), while Tamil does (about 0.10). The Indus seal corpus stacks at the Tamil rate, 0.08 to 0.13. '
+     +'This points toward the Dravidian family and away from the Indo-Aryan (Sanskrit) family, on this test. People have argued passionately for both, often for reasons beyond linguistics. We show the test, you saw the result. On <a href="#wall">The Wall</a> we show exactly where this stops: it names a family type, not a language, and never a sound. The Sanskrit hypothesis is a serious position that fails this specific test, not a foolish one.';};
+  draw();
 })();
 
 // ================= READ A REAL SEAL =================
