@@ -313,7 +313,18 @@ section>.wrap>p{max-width:64ch}
 .mbar.shuf .bar{background:linear-gradient(180deg,var(--carnelian-lo),var(--carnelian))}
 .mbar .val{font-family:'Marcellus',serif;font-size:24px;color:var(--indigo);margin-bottom:6px}
 .mbar .cap{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:var(--indigo-soft);margin-top:8px;text-align:center}
-@media(max-width:820px){.ledger{padding:28px 22px}.tl-take{padding:24px}.genetics{padding:24px}.approach-grid{grid-template-columns:1fr}}
+/* MEDIA: interstitial video + figures */
+.interstitial{position:relative;width:100%;height:min(62vh,520px);overflow:hidden;background:#17140f;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.interstitial video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.96) contrast(1.02)}
+.interstitial-cap{position:absolute;left:0;right:0;bottom:0;padding:14px 30px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:#EDE8DD;background:linear-gradient(0deg,rgba(20,18,14,.72),transparent)}
+figure.shot{margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-raise)}
+figure.shot img{width:100%;height:auto;display:block}
+figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--indigo-soft);letter-spacing:.04em;padding:10px 14px;background:var(--bone-hi)}
+.story-imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+@media(max-width:640px){.story-imgs{grid-template-columns:1fr}}
+.imgcredits{max-width:1080px;margin:0 auto;padding:6px 30px 34px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.7;color:var(--indigo-soft)}
+.imgcredits b{color:var(--indigo)}
+@media(max-width:820px){.ledger{padding:28px 22px}.tl-take{padding:24px}.genetics{padding:24px}.approach-grid{grid-template-columns:1fr}.interstitial{height:44vh}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.seal-strip .glyph,.slotband,.wall .above .stone,.seal-row .glyph,.seal-step{opacity:1!important;transform:none!important;filter:none!important}}
 </style>
 <script type="application/ld+json">
@@ -346,6 +357,11 @@ section>.wrap>p{max-width:64ch}
 <a class="card" href="#story"><h3>What It Was Like</h3><p>The human world behind the seals.</p></a>
 </div>
 </div></header>
+
+<div class="interstitial reveal" id="cityFilm">
+<video id="cityVid" muted loop playsinline preload="none" poster="assets/img/city-poster.jpg" aria-label="Aerial reconstruction of an Indus city and its signboard"></video>
+<div class="interstitial-cap">A drone view across a reconstructed Indus city and its signboard. Artist reconstruction, not a photograph.</div>
+</div>
 
 <section id="why"><div class="wrap">
 <div class="eyebrow reveal">the approach</div>
@@ -514,7 +530,11 @@ section>.wrap>p{max-width:64ch}
 <section id="story"><div class="wrap">
 <div class="eyebrow reveal">08 · what it was like</div>
 <h2 class="reveal">If no one can read it, how did they trade?</h2>
-<p class="reveal" style="max-width:700px;margin-top:14px;color:var(--indigo-soft)">The translation problem is <b>ours</b>, not theirs. The Indus people spoke their language fluently for a thousand years; only the written signs fell silent. Trade ran on interpreters (an Akkadian seal names a professional "Meluhhan interpreter"), standardized weights, and the seals themselves, cargo signatures readable by anyone in the system, rather like your signature works abroad today. <em>[This section will be richly illustrated, placeholder for the visual pass.]</em></p>
+<p class="reveal" style="max-width:700px;margin-top:14px;color:var(--indigo-soft)">The translation problem is <b>ours</b>, not theirs. The Indus people spoke their language fluently for a thousand years; only the written signs fell silent. Trade ran on interpreters (an Akkadian seal names a professional "Meluhhan interpreter"), standardized weights, and the seals themselves, cargo signatures readable by anyone in the system, rather like your signature works abroad today.</p>
+<div class="story-imgs reveal">
+<figure class="shot"><img src="assets/img/street-life.jpg" loading="lazy" alt="A reconstructed Indus street with people walking past a covered brick drain"><figcaption>A living street, with its covered drain. Artist reconstruction.</figcaption></figure>
+<figure class="shot"><img src="assets/img/dockyard-busy.jpg" loading="lazy" alt="A reconstructed brick dockyard basin with moored boats and stacked cargo"><figcaption>The dockyard, where sealed cargo moved. Artist reconstruction.</figcaption></figure>
+</div>
 </div></section>
 
 <section id="timeline"><div class="wrap">
@@ -548,6 +568,7 @@ section>.wrap>p{max-width:64ch}
 </div>
 </div></section>
 
+<div class="imgcredits"><b>Image and film credits.</b> All site imagery and the opening film are AI-generated artist reconstructions of Indus Valley sites (the Great Bath, covered street drains, the Lothal-style dockyard, granary working platforms, and a city gateway with its signboard), created for this project. They are illustrations to convey scale and atmosphere, not photographs or excavation records.</div>
 <div class="footer"><div class="wrap">
 INDUS ENGINE · method and data open · no sign assigned a sound<br>
 structural findings only · phonetic readings are not claimed<br>
@@ -764,6 +785,15 @@ rebusNext();
   if(!('IntersectionObserver' in window)){stones.forEach(s=>s.classList.add('lit'));return;}
   const wo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('lit');}),{rootMargin:'-25% 0px -25% 0px',threshold:0});
   stones.forEach(s=>wo.observe(s));
+})();
+
+// lazy-load the interstitial film (muted loop), skip under reduced motion
+(function(){
+  const v=document.getElementById('cityVid');if(!v)return;
+  const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce)return; // poster stays
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!v.getAttribute('src')){v.setAttribute('src','assets/video/indus-city.mp4');const p=v.play();if(p&&p.catch)p.catch(()=>{});}io.unobserve(v);}}),{rootMargin:'300px'});
+  io.observe(v);
 })();
 
 // reveal on scroll
