@@ -293,7 +293,7 @@ section>.wrap>p{max-width:64ch}
 /* TIMELINE, before & after the Indus */
 .tl-msg{background:linear-gradient(176deg,var(--bone-hi),var(--bone));border:1px solid var(--line);border-left:3px solid var(--carnelian);border-radius:10px;padding:24px 26px;margin-top:28px;font-size:16.5px;line-height:1.62;color:var(--indigo)}
 .tl-wrap{margin-top:30px;overflow-x:auto;scrollbar-width:thin;padding-bottom:8px}
-.tl{position:relative;min-width:760px;padding:30px 12px 6px}
+.tl{position:relative;min-width:1120px;padding:30px 12px 6px}
 .tl-axis{position:relative;height:20px;margin-left:120px;border-bottom:1px solid var(--line)}
 .tl-tick{position:absolute;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--indigo-soft);white-space:nowrap}
 .tl-era{position:absolute;top:0;height:100%;background:rgba(34,48,79,.07);border-left:1px dashed #B9B2A0;border-right:1px dashed #B9B2A0}
@@ -378,6 +378,13 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 .oq .ans{padding:0 2px 20px;font-size:14.5px;line-height:1.65;color:var(--indigo-soft);max-width:72ch}
 .oq .ans b{color:var(--indigo)}
 .gloss{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.02em;color:var(--carnelian);margin-top:12px;max-width:62ch;line-height:1.6}
+.threecol{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:24px}
+.tcol{border-radius:12px;padding:22px;border:1px solid var(--line);background:linear-gradient(176deg,var(--bone-hi),var(--bone))}
+.tcol h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
+.tcol.trad h4{color:var(--indigo-soft)}.tcol.evi h4{color:var(--faience)}.tcol.open h4{color:var(--carnelian)}
+.tcol.evi{border-left:3px solid var(--faience)}.tcol.open{border-left:3px solid var(--carnelian)}
+.tcol p{font-size:14px;line-height:1.6;color:var(--indigo)}
+@media(max-width:820px){.threecol{grid-template-columns:1fr}}
 .howto{font-size:13px;color:var(--indigo-soft);background:rgba(46,109,100,.06);border:1px solid rgba(46,109,100,.2);border-radius:8px;padding:12px 14px;margin-bottom:16px;line-height:1.55}
 .howto b{color:var(--indigo)}
 .strip .glyph{cursor:pointer}
@@ -409,7 +416,7 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 
 <nav><div class="wrap">
 <span class="brand">INDUS ENGINE</span>
-<a href="#why">Approach</a><a href="#math">Method</a><a href="#play">Play</a><a href="#games">Games</a><a href="#wall">The Wall</a><a href="#rebus">The Trap</a><a href="#seal">Read a Seal</a><a href="#facts">Facts</a><a href="#ledger">Ledger</a><a href="#story">Story</a><a href="#timeline">Timeline</a><a href="#futures">Futures</a>
+<a href="#why">Approach</a><a href="#math">Method</a><a href="#play">Play</a><a href="#games">Games</a><a href="#wall">The Wall</a><a href="#rebus">The Trap</a><a href="#seal">Read a Seal</a><a href="#facts">Facts</a><a href="#ledger">Ledger</a><a href="#story">Story</a><a href="#timeline">Timeline</a><a href="#memory">Memory</a><a href="#futures">Futures</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -649,13 +656,17 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 <div class="tl-wrap reveal"><div class="tl" id="tl"></div></div>
 <div class="tl-note" id="tlNote">Tap any ⚠ marker on the timeline to see exactly where scholars disagree.</div>
 <div class="tl-take reveal">The old story: India began with the Indus, and when the Indus fell its people vanished or were replaced. The evidence says otherwise. For millennia before Mohenjo-daro, people farmed by the Ganges and herded cattle in the Deccan. During the cities' height, entirely separate cultures thrived across the peninsula. And when the rivers failed, the city-dwellers did not disappear, they <b>moved, mixed, and carried on</b>. The Indus was a brilliant chapter. It was never the first page, and its ending was never the end.</div>
+<div class="tl-msg reveal" style="border-left-color:var(--faience)"><b>The Saraswati question.</b> Hundreds of Harappan sites cluster along the now-seasonal Ghaggar-Hakra river, and some identify it with the Saraswati praised in the Rigveda (old maps even labelled part of it "Sarsuti"). But recent sediment-dating (OSL) argues that a major Himalayan river had already dried in that channel before the cities rose. So whether a mighty river fed these cities, and whether the channel is the Vedic Saraswati, are both genuinely open, and politically charged, questions. We show the debate, we do not settle it.</div>
 <div class="genetics reveal">
 <h3>Who were the people? What DNA shows, and what it cannot</h3>
+<p style="font-size:15px;color:var(--indigo-soft);margin:8px 0 4px;max-width:66ch;line-height:1.6">First, the thing most easily lost in these debates: these were people, with families, skills, jokes, and grief. What follows is about ancestry and movement, never about worth.</p>
 <ul>
 <li>The deepest layer, the <b>AASI</b> (Ancient Ancestral South Indians), is a deeply diverged lineage indigenous to the subcontinent for tens of thousands of years, distantly related to the Andaman Islanders. South India rests on this deep foundation, not on displaced northerners.</li>
 <li>The one sequenced Indus genome (Rakhigarhi, ~2600 BCE) carried AASI ancestry plus an Iranian-related lineage that had <b>separated from Iranian populations before farming began</b>, long resident in South Asia, not incoming farmers, and <b>zero steppe ancestry</b>. [Shinde et al. 2019, <i>Cell</i>]</li>
 <li>Steppe ("Aryan"-associated) ancestry appears <b>after ~2000 BCE</b>, reaching the Swat Valley by ~1200 BCE, as gradual migration and admixture, <b>not</b> invasion and <b>not</b> population replacement. [Narasimhan et al. 2019, <i>Science</i>, 523 ancient genomes]</li>
 <li>So the honest correction: it is <b>not</b> that Indus people simply migrated south and became Dravidians. Southern populations descend overwhelmingly from the deep AASI layer that predates the Indus; some Iranian-related ancestry blended south gradually over centuries. Parallel, deeply-rooted populations mixing slowly, not one centre seeding everywhere.</li>
+<li>Many South Asian groups show strong <b>endogamy going back roughly 2,000 years</b>: the older mixing of north-related and south-related populations largely ended by then, so deep ancestry often tracks with community today. This is a finding about population history, not an endorsement of any social hierarchy. [Moorjani et al. 2013; Narasimhan et al. 2019]</li>
+<li><b>Debated, flagged as such:</b> some studies (Pugach et al. 2013) report a genetic signal of contact between South Asia and Australia around 4,000 years ago, alongside new stone-tool styles and the arrival of the dingo. Later work does not all find it, so treat it as an intriguing open thread, not a fact. It fits a larger truth: humans have always moved.</li>
 </ul>
 <div class="guardrail">
 <h4>The hard limit</h4>
@@ -673,8 +684,21 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 </div>
 </div></section>
 
+<section id="memory"><div class="wrap">
+<div class="eyebrow reveal">10 · the longer memory</div>
+<h2 class="reveal">The subcontinent's longer memory.</h2>
+<p class="reveal" style="max-width:700px;margin-top:14px;color:var(--indigo-soft)">The Indus is one kind of record, dug from the ground. The great texts are another, carried in memory. Both matter, and mixing them up is exactly how overclaiming begins. So we keep them labelled.</p>
+<h3 class="reveal" style="font-family:'Marcellus',serif;font-size:22px;margin-top:34px;color:var(--indigo)">The epics: the Mahabharata and Ramayana</h3>
+<div class="threecol reveal">
+<div class="tcol trad"><h4>What tradition says</h4><p>Two of humanity's great epics, remembered as history: a vast war among kin, and a long journey home. Traditional astronomical readings place the war around 3102 BCE.</p></div>
+<div class="tcol evi"><h4>What evidence shows</h4><p>Most archaeologists read them as living cultural memory with a Late Vedic core. Painted Grey Ware settlements, roughly 1200 to 600 BCE, sit at sites the Mahabharata names: Hastinapur, Kurukshetra, Indraprastha. B.B. Lal found Hastinapur reoccupied about 1100 to 800 BCE.</p></div>
+<div class="tcol open"><h4>What stays open</h4><p>The early 3102 BCE date is contested and not archaeologically supported. A rival reading ties the story to older Ochre Coloured Pottery around 2000 BCE. The historical core looks real; its exact date is not settled.</p></div>
+</div>
+<p class="reveal" style="max-width:700px;margin-top:26px;color:var(--indigo-soft);font-size:15px;line-height:1.65"><b style="color:var(--indigo)">The honest bridge.</b> None of this reads the Indus script, and none of it needs to. Texts preserve memory; the ground preserves things; matching one to the other is where care is required. We keep "tradition says" and "evidence shows" clearly apart, because that labelling is the whole discipline of this site.</p>
+</div></section>
+
 <section id="futures"><div class="wrap">
-<div class="eyebrow reveal">10 · what would change this</div>
+<div class="eyebrow reveal">11 · what would change this</div>
 <h2 class="reveal">What would change this?</h2>
 <p class="reveal" style="max-width:680px;margin-top:14px;color:var(--indigo-soft)">A finding is only science if something could overturn it. Here is what would, and what each would let us finally say.</p>
 <div class="futures-grid reveal">
@@ -908,13 +932,16 @@ rebusNext();
 // ================= TIMELINE =================
 (function(){
   const tl=document.getElementById('tl');if(!tl)return;
-  const T0=7200,T1=1000,SPAN=T0-T1;
+  const T0=7200,T1=300,SPAN=T0-T1;
   const x=y=>((T0-y)/SPAN*100);
   const lanes=[
    {name:'Northwest',events:[
-     {y:7000,l:'Mehrgarh farming village',debated:true,note:'Mehrgarh, Balochistan: farming (wheat, barley, cattle) from ~7000 BCE on the traditional dating (Jarrige). ⚠ A recent tooth-enamel radiocarbon study argues Period I is later, ~5250 to 4650 BCE. The exact start is debated, but it long predates the Indus cities either way.'},
-     {y:2600,l:'Indus cities'},
-     {y:1900,l:'cities de-urbanise'}
+     {y:7000,l:'Mehrgarh farming village',era:'Neolithic',debated:true,note:'Mehrgarh, Balochistan: farming (wheat, barley, cattle) from ~7000 BCE on the traditional dating (Jarrige). ⚠ A recent tooth-enamel radiocarbon study argues Period I is later, ~5250 to 4650 BCE. The exact start is debated, but it long predates the Indus cities either way.'},
+     {y:2600,l:'Indus cities',era:'Bronze'},
+     {y:1900,l:'cities de-urbanise'},
+     {y:1200,l:'iron, grey ware',era:'Iron',debated:true,note:'Painted Grey Ware culture, ~1200 to 600 BCE, arriving with iron. Widely read as the archaeological correlate of the Late Vedic world (B.B. Lal at Hastinapur). ⚠ The exact link to specific texts is debated.'},
+     {y:600,l:'Mahajanapadas',note:'Second urbanisation: Northern Black Polished Ware, the Mahajanapadas, and the first coinage, around 600 BCE.'},
+     {y:300,l:'Mauryas, Brahmi',note:'Writing returns to the subcontinent around 300 BCE with Brahmi, a completely different system from the Indus signs. The Indus script itself was never revived.'}
    ]},
    {name:'Ganges',events:[
      {y:6400,l:'Lahuradewa: early rice',debated:true,note:'Lahuradewa, Uttar Pradesh: rice by ~6409 BCE (Tewari et al. 2008). ⚠ Whether it was domesticated is disputed, Fuller et al. argue the grains overlap wild rice; fully domesticated rice appears only ~1800 BCE. Read this as "early rice exploitation," not "the first rice farming."'},
@@ -926,12 +953,12 @@ rebusNext();
      {y:1400,l:'tradition continues'}
    ]}
   ];
-  const ticks=[7000,5000,3000,2000,1000];
+  const ticks=[7000,5000,3000,1000,300];
   let axis='<div class="tl-axis">'+ticks.map(t=>`<span class="tl-tick" style="left:${x(t)}%">${t} BCE</span>`).join('')
     +`<div class="tl-era" style="left:${x(2600)}%;width:${(x(1900)-x(2600))}%"></div>`
     +`<div class="tl-shock" style="left:${x(2200)}%"><span>4.2 ky drought</span></div></div>`;
   const lanesHtml=lanes.map(ln=>{
-    const evs=ln.events.map((e,ei)=>`<div class="ev ${e.debated?'debated ':''}${ei%2?'up':''}" data-note="${(e.note||'').replace(/"/g,'&quot;')}" style="left:${x(e.y)}%"><span class="dot"></span><span class="lbl">${e.l}<br>${e.y} BCE</span></div>`).join('');
+    const evs=ln.events.map((e,ei)=>`<div class="ev ${e.debated?'debated ':''}${ei%2?'up':''}" data-note="${(e.note||'').replace(/"/g,'&quot;')}" style="left:${x(e.y)}%"><span class="dot"></span><span class="lbl">${e.l}<br>${e.y} BCE${e.era?' · '+e.era:''}</span></div>`).join('');
     return `<div class="lane"><span class="lane-label">${ln.name}</span><div class="lane-track"></div>${evs}</div>`;
   }).join('');
   tl.innerHTML=axis+lanesHtml;
