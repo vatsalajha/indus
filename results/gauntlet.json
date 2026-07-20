@@ -1,0 +1,105 @@
+{
+ "corpus": "mayig 179 seals (175 texts >=2 signs)",
+ "suf_class": [
+  "P324",
+  "P086",
+  "P217",
+  "P013",
+  "P301",
+  "P004"
+ ],
+ "T1_fish_name_vs_commodity": {
+  "fish_mean_position": 0.559,
+  "fish_before_jar": 63,
+  "fish_after_jar": 3,
+  "numeral_fish_compounds": 44,
+  "compound_takes_suffix": 4,
+  "compound_text_final": 3,
+  "compound_bare_midtext": 37,
+  "verdict": "fish behaves like a countable noun (stem-side); the specific numeral+fish = star-name prediction is NOT clearly supported: most compounds sit bare mid-text, more commodity-like than named-entity-like"
+ },
+ "T2_jar_lr_diversity": {
+  "jar_distinct_left": 55,
+  "jar_distinct_right": 13,
+  "jar_lr_ratio": 4.23,
+  "fish_distinct_left": 28,
+  "fish_distinct_right": 43,
+  "fish_lr_ratio": 0.65,
+  "verdict": "jar bolts onto many stems, is rarely followed -> suffix fingerprint; fish shows content-word fingerprint"
+ },
+ "T3_terminal_concentration": {
+  "distinct_final_signs": 33,
+  "inventory_final_fraction": 0.184,
+  "top5_ending_share": 0.714,
+  "top5_enders": [
+   [
+    "P324",
+    77
+   ],
+   [
+    "P086",
+    19
+   ],
+   [
+    "P217",
+    14
+   ],
+   [
+    "P013",
+    9
+   ],
+   [
+    "P004",
+    6
+   ]
+  ],
+  "jar_lance_cooccur": 1,
+  "jar_only": 93,
+  "lance_only": 17,
+  "texts_with_either": 111,
+  "verdict": "a small near-closed terminal set (33 signs ever final); jar+lance co-occur in only 1/111 -> near-complementary, suffix-like"
+ },
+ "T4_name_formula": {
+  "distinct_stems_before_jar": 55,
+  "jar_stem_positions": 98,
+  "verdict": "55 distinct stems feed one jar suffix across 98 positions -> many-names-one-ending"
+ },
+ "T5_suffix_order": {
+  "pairs": {
+   "P086+P324": {
+    "cooccur": 15,
+    "a_before_b": 10,
+    "b_before_a": 5,
+    "dominant_order": "P086<P324",
+    "binom_p": 0.3018
+   },
+   "P013+P324": {
+    "cooccur": 9,
+    "a_before_b": 0,
+    "b_before_a": 9,
+    "dominant_order": "P324<P013",
+    "binom_p": 0.0039
+   }
+  },
+  "jar_man": {
+   "cooccur": 9,
+   "jar_before_man": 9,
+   "man_before_jar": 0,
+   "dominant": "jar<man (man is last)",
+   "order_consistency": "9/9",
+   "perm_p": 0.004,
+   "note": "2000 per-text shuffles; p = P(random order reaches observed one-directional consistency). Corrects the chat's reversed man->jar direction: the fixed pair is jar THEN man."
+  }
+ },
+ "T6_number_sensitivity": {
+  "jar_texts_with_numeral": 0.713,
+  "nonjar_texts_with_numeral": 0.741,
+  "verdict": "jar is number-independent -> case/honorific, not a plural marker"
+ },
+ "T7_modifier_head": {
+  "numeral_before_content": 74,
+  "numeral_after_content": 90,
+  "ratio": 0.82,
+  "verdict": "NULL: numerals precede and follow content signs about equally; clean modifier-head order not present in this corpus"
+ }
+}

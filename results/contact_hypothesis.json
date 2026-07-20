@@ -1,0 +1,44 @@
+{
+ "ST1_frame_is_dravidian": {
+  "separable_stacking": 1,
+  "separable_matches": "Tamil (1) and Gondi (1); Vedic (0)",
+  "terminal_concentration_top5": 0.714,
+  "fixed_suffix_order": {
+   "seal_level": "jar->man 9/9 (binomial p=0.0039)",
+   "m77_aggregate": false,
+   "flag": "seal-construction convention; does NOT generalize to M77 aggregate \u2014 not used as morphological-order evidence"
+  },
+  "verdict": "Dravidian frame SUPPORTED on the separability + terminal-set axes; the ordering plank is seal-specific and set aside."
+ },
+ "ST2_depth_reduced": {
+  "status": "WITHDRAWN",
+  "reason": "No depth reduction vs gold Tamil exists (Tamil running text stacks ~0.097; Indus 0.08-0.125). The chat's reduced-morphology claim was a small-sample artifact."
+ },
+ "ST3_register_layering": {
+  "register_profiles": {
+   "SEAL/TAG": {
+    "n": 34,
+    "jar_terminal_rate": 0.382,
+    "mean_len": 4.24
+   },
+   "POTTERY": {
+    "n": 7,
+    "jar_terminal_rate": 0.0,
+    "mean_len": 2.57
+   }
+  },
+  "verdict": "Pottery graffiti carry the jar suffix at a different rate than seals (register split), but the pottery sample is tiny (n<10); this is a register difference, NOT evidence of a distinct language layer. Under-powered."
+ },
+ "AT_between_offaxis": {
+  "indus_rate": {
+   "mayig": 0.08,
+   "icit": 0.125
+  },
+  "tamil_rate": 0.097,
+  "gondi_rate": null,
+  "at_tamil": true,
+  "between_testable": false,
+  "between_reason": "No gold Gondi running-text rate exists, so 'Indus between Tamil and Gondi' cannot be measured. The contact hypothesis's one potential quantitative test is unavailable."
+ },
+ "VERDICT": "GENERICALLY DRAVIDIAN. Indus separates grammatical morphemes (like Tamil and Gondi, unlike fusional Vedic) and stacks at the gold-Tamil running-text rate. Both tested Dravidian branches are agglutinative, so the result supports 'Dravidian' broadly, not specifically Tamil. A contact / mixed-language account CANNOT be distinguished from simple Dravidian on this evidence: the depth-shortfall argument is withdrawn, and the between-branch test needs a Gondi rate that does not exist. Contact remains a live but unselected hypothesis."
+}

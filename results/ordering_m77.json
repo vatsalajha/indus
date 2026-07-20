@@ -1,0 +1,33 @@
+{
+ "jar_fin_share": 0.696,
+ "man_fin_shares": {
+  "1": 0.642
+ },
+ "man_weighted": 0.642,
+ "tree_fin_shares": {
+  "161": 0.5,
+  "162": 0.425,
+  "167": 0.143,
+  "168": 1.0,
+  "169": 0.542
+ },
+ "tree_weighted": 0.483,
+ "lance_fin_shares": {
+  "211": 0.811
+ },
+ "lance_weighted": 0.811,
+ "test_tree_before_jar": {
+  "prediction": "tree FIN < jar FIN",
+  "tree_fin": 0.483,
+  "jar_fin": 0.696,
+  "survives": true,
+  "note": "tree earlier than jar in seals (10/15) -> tree should be less final. CONFIRMED by M77."
+ },
+ "test_jar_before_man": {
+  "prediction": "jar FIN <= man FIN (man is last)",
+  "jar_fin": 0.696,
+  "man_fin": 0.642,
+  "survives": false,
+  "note": "NOT confirmed at aggregate level: man's overall FIN share (0.642) is below jar's (0.696). The jar->man order is a seal-construction fact; across all M77 contexts man appears in many non-terminal roles, so aggregate finality does not reflect the construction. Honest mixed result."
+ }
+}

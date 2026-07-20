@@ -1,0 +1,873 @@
+{
+ "attack_frequency": {
+  "fuls_preview": {
+   "hapax": 49,
+   "hapax_frac_types": 0.563,
+   "signs_for_80pct": 50,
+   "tokens": 185,
+   "top10": [
+    [
+     "740",
+     19
+    ],
+    [
+     "002",
+     15
+    ],
+    [
+     "390",
+     8
+    ],
+    [
+     "861",
+     6
+    ],
+    [
+     "235",
+     5
+    ],
+    [
+     "017",
+     4
+    ],
+    [
+     "840",
+     4
+    ],
+    [
+     "032",
+     4
+    ],
+    [
+     "003",
+     4
+    ],
+    [
+     "060",
+     4
+    ]
+   ],
+   "types": 87,
+   "zm_alpha": 0.643976782079791,
+   "zm_beta": -0.3911853527135334,
+   "zm_logC": 2.702856698692276,
+   "zm_log_r2": 0.9359974986334557
+  },
+  "mayig_179": {
+   "hapax": 75,
+   "hapax_frac_types": 0.419,
+   "signs_for_80pct": 57,
+   "tokens": 980,
+   "top10": [
+    [
+     "P324",
+     99
+    ],
+    [
+     "P122",
+     75
+    ],
+    [
+     "P385",
+     35
+    ],
+    [
+     "P086",
+     35
+    ],
+    [
+     "P050",
+     32
+    ],
+    [
+     "P145",
+     27
+    ],
+    [
+     "P230",
+     23
+    ],
+    [
+     "P120",
+     22
+    ],
+    [
+     "P062",
+     21
+    ],
+    [
+     "P060",
+     20
+    ]
+   ],
+   "types": 179,
+   "zm_alpha": 1.4463998457252796,
+   "zm_beta": 7.9324724288397395,
+   "zm_logC": 7.297965028410201,
+   "zm_log_r2": 0.9728382686834668
+  }
+ },
+ "attack_numerals": {
+  "counted_top12": [
+   [
+    "P364",
+    12,
+    "Leaf with tree at bottom"
+   ],
+   [
+    "P050",
+    12,
+    "Fish with no other decoration"
+   ],
+   [
+    "P145",
+    9,
+    "Two adjacent full-height vertical stroke"
+   ],
+   [
+    "P086",
+    8,
+    "Simple tree with branches at the top"
+   ],
+   [
+    "P060",
+    8,
+    "Fish with a caret shaped hat"
+   ],
+   [
+    "P062",
+    7,
+    "Fish with extra whiskers on cheeks"
+   ],
+   [
+    "P058",
+    7,
+    "Fish with a horizontal line through body"
+   ],
+   [
+    "P056",
+    5,
+    "Fish with a small vertical stroke in the"
+   ],
+   [
+    "P122",
+    5,
+    "Two adjacent half-height simple vertical"
+   ],
+   [
+    "P217",
+    5,
+    "Isocolese triangle on top of vertical li"
+   ],
+   [
+    "P316",
+    4,
+    "U with a long vertical stroke inserted i"
+   ],
+   [
+    "P230",
+    4,
+    "The 'pincer' motif. Right-pointing isoco"
+   ]
+  ],
+  "fish_share_of_counted": 0.247,
+  "fish_signs_counted_total": 44,
+  "full_series_top5": [
+   [
+    "P050",
+    8
+   ],
+   [
+    "P217",
+    5
+   ],
+   [
+    "P122",
+    4
+   ],
+   [
+    "P121",
+    2
+   ],
+   [
+    "P091",
+    2
+   ]
+  ],
+  "half_series_top5": [
+   [
+    "P364",
+    12
+   ],
+   [
+    "P145",
+    9
+   ],
+   [
+    "P086",
+    8
+   ],
+   [
+    "P060",
+    7
+   ],
+   [
+    "P058",
+    6
+   ]
+  ],
+  "strict_numeral_list": {
+   "full_height": {
+    "P121": 1,
+    "P145": 2,
+    "P147": 3,
+    "P202": 4
+   },
+   "half_height": {
+    "P056": 6,
+    "P122": 2,
+    "P123": 3,
+    "P126": 4,
+    "P144": 5,
+    "P325": 7
+   }
+  }
+ },
+ "attack_positional": {
+  "fuls_classes": {
+   "BODY": [
+    "840"
+   ],
+   "EARLY": [
+    "060",
+    "235"
+   ],
+   "NUM": [
+    "002",
+    "003",
+    "017",
+    "032"
+   ],
+   "OPEN": [
+    "861"
+   ],
+   "SUF": [
+    "390",
+    "740"
+   ]
+  },
+  "fuls_n_classified": 10,
+  "mayig_classes": {
+   "BODY": [
+    "P050",
+    "P058",
+    "P060",
+    "P062",
+    "P073",
+    "P092",
+    "P154",
+    "P160",
+    "P194",
+    "P205",
+    "P215",
+    "P230",
+    "P268",
+    "P276",
+    "P349",
+    "P364"
+   ],
+   "EARLY": [
+    "P120"
+   ],
+   "NUM": [
+    "P056",
+    "P121",
+    "P122",
+    "P123",
+    "P126",
+    "P144",
+    "P145",
+    "P147",
+    "P202",
+    "P316",
+    "P325"
+   ],
+   "OPEN": [
+    "P011",
+    "P076",
+    "P256",
+    "P378",
+    "P385"
+   ],
+   "PRESUF": [
+    "P175",
+    "P332"
+   ],
+   "SUF": [
+    "P004",
+    "P013",
+    "P086",
+    "P217",
+    "P301",
+    "P324"
+   ]
+  },
+  "mayig_n_classified": 41
+ },
+ "attack_substitution": {
+  "clusters_at_0.65": [
+   [
+    "P004",
+    "P013",
+    "P086",
+    "P217",
+    "P301",
+    "P324"
+   ],
+   [
+    "P205",
+    "P256",
+    "P378",
+    "P385"
+   ],
+   [
+    "P092",
+    "P145"
+   ],
+   [
+    "P175",
+    "P194",
+    "P332"
+   ]
+  ],
+  "jar_cluster": [
+   "P004",
+   "P013",
+   "P086",
+   "P217",
+   "P301",
+   "P324"
+  ],
+  "jar_lance_cosine": 0.831,
+  "n_candidate_signs": 41,
+  "suf_class_members_recovered_blind": [
+   "P004",
+   "P013",
+   "P086",
+   "P217",
+   "P301",
+   "P324"
+  ],
+  "top10_pairs": [
+   [
+    0.89,
+    "P385",
+    "P378"
+   ],
+   [
+    0.831,
+    "P324",
+    "P217"
+   ],
+   [
+    0.813,
+    "P324",
+    "P086"
+   ],
+   [
+    0.793,
+    "P145",
+    "P092"
+   ],
+   [
+    0.79,
+    "P324",
+    "P004"
+   ],
+   [
+    0.783,
+    "P086",
+    "P004"
+   ],
+   [
+    0.774,
+    "P332",
+    "P175"
+   ],
+   [
+    0.754,
+    "P324",
+    "P301"
+   ],
+   [
+    0.729,
+    "P332",
+    "P194"
+   ],
+   [
+    0.72,
+    "P378",
+    "P256"
+   ]
+  ]
+ },
+ "attack_suffix_chain": {
+  "fuls_preview": {
+   "jar_nonfinal_occurrences": 4,
+   "jar_post_top5": [
+    [
+     "170",
+     1
+    ],
+    [
+     "090",
+     1
+    ],
+    [
+     "233",
+     1
+    ],
+    [
+     "400",
+     1
+    ]
+   ],
+   "jar_pre_top8": [
+    [
+     "904",
+     2
+    ],
+    [
+     "760",
+     2
+    ],
+    [
+     "235",
+     1
+    ],
+    [
+     "390",
+     1
+    ],
+    [
+     "017",
+     1
+    ],
+    [
+     "840",
+     1
+    ],
+    [
+     "142",
+     1
+    ],
+    [
+     "440",
+     1
+    ]
+   ]
+  },
+  "mayig_179": {
+   "jar_nonfinal_occurrences": 22,
+   "jar_post_top5": [
+    [
+     "P013",
+     9,
+     "Person with two arms and two legs, \ue06e"
+    ],
+    [
+     "P060",
+     2,
+     "Fish with a caret shaped hat"
+    ],
+    [
+     "P011",
+     1,
+     "Person with round breasts and one ra"
+    ],
+    [
+     "P341",
+     1,
+     "Four rounded lines going upward, cur"
+    ],
+    [
+     "P121",
+     1,
+     "Simple, half-height vertical stroke"
+    ]
+   ],
+   "jar_pre_top8": [
+    [
+     "P332",
+     10,
+     "U with decorated branching at top"
+    ],
+    [
+     "P086",
+     5,
+     "Simple tree with branches at the top"
+    ],
+    [
+     "P175",
+     5,
+     "Right parenthesis drawn in outline"
+    ],
+    [
+     "P154",
+     4,
+     "Right parenthesis (perhaps with a ba"
+    ],
+    [
+     "P194",
+     4,
+     "Person sitting with bent knees, four"
+    ],
+    [
+     "P009",
+     4,
+     "Person with three heads"
+    ],
+    [
+     "P096",
+     3,
+     "U where one arm has a double headed "
+    ],
+    [
+     "P230",
+     3,
+     "The 'pincer' motif. Right-pointing i"
+    ]
+   ],
+   "x_jar_person_formula_texts": 9
+  }
+ },
+ "attack_template": {
+  "by_genre": {
+   "OTHER": {
+    "coverage": null,
+    "n": 2
+   },
+   "POTTERY": {
+    "coverage": 1.0,
+    "n": 7
+   },
+   "SEAL/TAG": {
+    "coverage": 0.912,
+    "n": 34
+   },
+   "TABLET": {
+    "coverage": 0.667,
+    "n": 3
+   }
+  },
+  "by_site": {
+   "Alamgirpur": {
+    "coverage": 1.0,
+    "n": 3
+   },
+   "Allahdino": {
+    "coverage": 0.8,
+    "n": 10
+   },
+   "Altyn Depe": {
+    "coverage": null,
+    "n": 1
+   },
+   "Amri": {
+    "coverage": null,
+    "n": 2
+   },
+   "Bakkar Buthi": {
+    "coverage": null,
+    "n": 1
+   },
+   "Bala-kot": {
+    "coverage": null,
+    "n": 2
+   },
+   "Mohenjo-daro": {
+    "coverage": 0.889,
+    "n": 27
+   }
+  },
+  "fuls_preview": {
+   "coverage": 0.891,
+   "n_texts": 46,
+   "p_value": 0.0,
+   "shuffled_mean": 0.523
+  },
+  "mayig_179": {
+   "coverage": 0.754,
+   "n_texts": 175,
+   "p_value": 0.0,
+   "shuffled_mean": 0.23
+  }
+ },
+ "dialect_test": {
+  "Alamgirpur": {
+   "n": 3
+  },
+  "Allahdino": {
+   "ci95": [
+    0.5,
+    1.0
+   ],
+   "coverage": 0.8,
+   "n": 10,
+   "top_bigrams": [
+    [
+     "235->740",
+     1
+    ],
+    [
+     "590->390",
+     1
+    ],
+    [
+     "390->740",
+     1
+    ],
+    [
+     "033->125",
+     1
+    ],
+    [
+     "125->390",
+     1
+    ],
+    [
+     "390->368",
+     1
+    ],
+    [
+     "235->705",
+     1
+    ],
+    [
+     "705->033",
+     1
+    ],
+    [
+     "033->904",
+     1
+    ],
+    [
+     "904->740",
+     1
+    ]
+   ]
+  },
+  "Altyn Depe": {
+   "n": 1
+  },
+  "Amri": {
+   "n": 2
+  },
+  "Bakkar Buthi": {
+   "n": 1
+  },
+  "Bala-kot": {
+   "n": 2
+  },
+  "Mohenjo-daro": {
+   "ci95": [
+    0.741,
+    1.0
+   ],
+   "coverage": 0.889,
+   "n": 27,
+   "top_bigrams": [
+    [
+     "861->002",
+     3
+    ],
+    [
+     "760->740",
+     2
+    ],
+    [
+     "820->002",
+     2
+    ],
+    [
+     "817->002",
+     2
+    ],
+    [
+     "002->005",
+     2
+    ],
+    [
+     "061->151",
+     1
+    ],
+    [
+     "891->060",
+     1
+    ],
+    [
+     "060->031",
+     1
+    ],
+    [
+     "031->484",
+     1
+    ],
+    [
+     "484->337",
+     1
+    ]
+   ]
+  },
+  "overall": {
+   "ci95": [
+    0.804,
+    0.978
+   ],
+   "coverage": 0.891,
+   "n": 46
+  },
+  "sites_outside_overall_ci": []
+ },
+ "genre_split": {
+  "OTHER": {
+   "jar_terminal": "1/2",
+   "len_range": [
+    5,
+    5
+   ],
+   "median_len": 5,
+   "n": 2,
+   "suf_terminal": "1/2"
+  },
+  "POTTERY": {
+   "jar_terminal": "0/7",
+   "len_range": [
+    2,
+    6
+   ],
+   "median_len": 2,
+   "n": 7,
+   "suf_terminal": "3/7"
+  },
+  "SEAL/TAG": {
+   "jar_terminal": "13/34",
+   "len_range": [
+    2,
+    8
+   ],
+   "median_len": 4,
+   "n": 34,
+   "suf_terminal": "21/34"
+  },
+  "TABLET": {
+   "jar_terminal": "1/3",
+   "len_range": [
+    2,
+    7
+   ],
+   "median_len": 4,
+   "n": 3,
+   "suf_terminal": "2/3"
+  }
+ },
+ "ligature_test": {
+  "planned": "decompose compounds into components, rerun template test, compare coverage",
+  "reason": "compound/component tables absent from the Catalog preview; requires the full book (or ICIT access) to run",
+  "status": "PARKED"
+ },
+ "m77_validation": {
+  "corpus_baseline": {
+   "fin_share": 0.223,
+   "ini_share": 0.225
+  },
+  "method": "test C machinery: 10k permutations, log2-frequency-matched bins, seed=7",
+  "test_A_suf_vs_fin": {
+   "class_m77_signs": [
+    1,
+    15,
+    161,
+    162,
+    167,
+    168,
+    169,
+    211,
+    254,
+    342
+   ],
+   "mean_fin_share": 0.632,
+   "p_freq_matched": 0.0,
+   "per_sign": {
+    "1": 0.642,
+    "15": 0.73,
+    "161": 0.5,
+    "162": 0.425,
+    "167": 0.143,
+    "168": 1.0,
+    "169": 0.542,
+    "211": 0.811,
+    "254": 0.836,
+    "342": 0.696
+   }
+  },
+  "test_B_open_vs_ini": {
+   "class_m77_signs": [
+    17,
+    54,
+    55,
+    150,
+    267,
+    391
+   ],
+   "mean_ini_share": 0.573,
+   "p_freq_matched": 0.0041,
+   "per_sign": {
+    "150": 0.81,
+    "17": 0.418,
+    "267": 0.793,
+    "391": 0.692,
+    "54": 0.474,
+    "55": 0.25
+   }
+  }
+ },
+ "motif_test": {
+  "bull": {
+   "jar_terminal": "11/24",
+   "n": 24
+  },
+  "chi_square": {
+   "caveat": "small-n pilot; expected counts low",
+   "chi2": 9.27,
+   "dof": 14,
+   "groups": [
+    "none",
+    "bull",
+    "other_animal"
+   ],
+   "p": 0.8136,
+   "top_signs": [
+    "740",
+    "002",
+    "390",
+    "861",
+    "017",
+    "840",
+    "032",
+    "060"
+   ]
+  },
+  "none": {
+   "jar_terminal": "3/14",
+   "n": 14
+  },
+  "other": {
+   "jar_terminal": "0/2",
+   "n": 2
+  },
+  "other_animal": {
+   "jar_terminal": "1/6",
+   "n": 6
+  }
+ }
+}

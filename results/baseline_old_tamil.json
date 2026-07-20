@@ -1,0 +1,11 @@
+{
+ "lex_tokens": 6175,
+ "orthographic_words_with_mwt_header": 8635,
+ "mwt_split_rate": 0.097,
+ "mean_tokens_per_mwt_word": 1.11,
+ "feats_per_lex_token": 3.595,
+ "case_bearing_tokens": 4143,
+ "case_number_cofused_rate": 1.0,
+ "corpus": "Tamil (UD_Tamil-TTB, gold; modern register \u2014 caveat)",
+ "note": "Agglutinative pole. MWT splitting present: grammatical morphemes separable. Register is modern Tamil, not Old Tamil \u2014 used because it carries gold morpheme annotation Sangam verse lacks."
+}

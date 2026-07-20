@@ -1,0 +1,8 @@
+# Never commit copyrighted corpus data — aggregate stats + code only
+data/
+mayig/
+*.csv
+*.tsv
+.DS_Store
+__pycache__/
+*.pyc

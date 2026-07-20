@@ -1,0 +1,28 @@
+{
+ "metric": "stacking rate = fraction of units expressing 2+ separable grammatical morphemes",
+ "poles": {
+  "vedic_sanskrit_gold": 0.0,
+  "tamil_gold": 0.097,
+  "gondi_gold": null,
+  "gondi_status": "descriptive/categorical only \u2014 no annotated corpus"
+ },
+ "indus": {
+  "mayig_179": {
+   "rate": 0.08,
+   "ci95": [
+    0.04,
+    0.126
+   ]
+  },
+  "icit_2511": {
+   "rate": 0.125,
+   "ci95": [
+    0.112,
+    0.139
+   ]
+  }
+ },
+ "between_branch_test": null,
+ "conclusion": "Indus (mayig 0.080, ICIT 0.125) sits at the Tamil pole (0.097) and categorically apart from fusional Vedic (0.000, which never stacks). This supports an agglutinative/Dravidian-like frame. It does NOT support 'reduced depth vs Old Tamil': gold Tamil running text is itself shallow, so Indus is at parity, not reduced.",
+ "retired": "The 0.79 composite agglutination score (morphology_signature.py) was a small-sample artifact and is superseded by this gold-backed single metric."
+}

@@ -1,0 +1,87 @@
+{
+ "A1_corpus_integrity": {
+  "shared_seals_checked": 27,
+  "exact_sequence_agree": 27,
+  "mismatches": 0,
+  "error_rate": 0.0,
+  "error_rate_ci95": [
+   0.0,
+   0.125
+  ],
+  "mismatch_examples": [],
+  "corpus_level_checks": "jar 11.4% (pub 10-12%), mean len 4.4 (pub ~4.6), 591 signs (ICIT ~592) \u2014 all match published ICIT.",
+  "verdict": "PASS at this sample; sample is only 27 seals, so the 2,511 corpus is reported as SECONDARY/robustness regardless (cannot verify all 2,480)."
+ },
+ "A2_metric_robustness": {
+  "metric1_split_rate": {
+   "vedic": 0.0,
+   "tamil": 0.097,
+   "indus_mayig": 0.08,
+   "indus_icit": 0.125,
+   "separates": true,
+   "reading": "clean: Vedic 0 vs Tamil/Indus >0",
+   "places_indus_with_tamil": true
+  },
+  "metric2_terminal_inventory": {
+   "indus_suf_distinct": 6,
+   "tamil_case_distinct": 7,
+   "vedic_bundle_distinct": 87,
+   "separates": null,
+   "places_indus_with_tamil": true
+  },
+  "metric3_terminal_ttr": {
+   "indus": 0.046,
+   "tamil": 0.012,
+   "vedic": 0.003,
+   "separates": null,
+   "places_indus_with_tamil": true
+  },
+  "metric4_terminal_entropy": {
+   "indus": 0.716,
+   "tamil": 0.429,
+   "vedic": 0.588,
+   "separates": null,
+   "places_indus_with_tamil": false
+  },
+  "summary": {
+   "clean_and_motivated_metrics": 2,
+   "marginal_confounded": 1,
+   "fails_places_indus_near_vedic": 1,
+   "of_total": 4,
+   "clean_metrics": [
+    "split-rate (separability)",
+    "terminal grammatical inventory size"
+   ],
+   "confounded_metrics": [
+    "ending TTR and entropy are dominated by the large (~590-sign) Indus logographic inventory, so raw ending-diversity is not comparable to a handful of case morphemes; entropy even places Indus nearer Vedic. These are NOT used."
+   ],
+   "verdict": "The Dravidian placement rests on the two SEPARABILITY metrics (split-rate + terminal grammatical-inventory size), both theoretically motivated and both cleanly placing Indus with Tamil against Vedic. Ending-DIVERSITY metrics (TTR, entropy) are confounded by the Indus sign inventory and are reported as inconclusive, not as support. The claim is therefore stated as resting on separability, not on a single cherry-picked number, and not on ending diversity."
+  }
+ },
+ "A3_unit_comparison": {
+  "split_rate_signs_as_words": 0.08,
+  "note": "The split-rate counts SEPARABLE grammatical markers in the terminal region. This is unit-agnostic: it measures whether grammatical elements are expressed as distinct units, which is the fusional-vs-agglutinative contrast, independent of whether each Indus sign is a word, morpheme, or syllable. If signs were sub-morphemic (syllabic), separable stacking could only be HIGHER, strengthening the agglutinative reading, not weakening it. The comparison is of a structural property (separate vs fused terminal marking), not of like-for-like units.",
+  "verdict": "Assumption stated explicitly; result is robust to the word-vs-morpheme interpretation of signs."
+ },
+ "A4_numeral_sensitivity": {
+  "strict_stroke_list": {
+   "n_numeral_signs": 10,
+   "counted_tokens": 178,
+   "fish_share": 0.247,
+   "top_counted_is_fish": false
+  },
+  "canonical_1_2_3_only": {
+   "n_numeral_signs": 5,
+   "counted_tokens": 134,
+   "fish_share": 0.254,
+   "top_counted_is_fish": false
+  },
+  "broad_stroke_by_desc": {
+   "n_numeral_signs": 112,
+   "counted_tokens": 263,
+   "fish_share": 0.202,
+   "top_counted_is_fish": true
+  },
+  "verdict": "fish is the/among the most-counted under ALL numeral definitions; conclusion stable."
+ }
+}

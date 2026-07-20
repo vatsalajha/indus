@@ -1,0 +1,11 @@
+{
+ "lex_tokens": 158291,
+ "orthographic_words_with_mwt_header": 206440,
+ "mwt_split_rate": 0.0,
+ "mean_tokens_per_mwt_word": 1.0,
+ "feats_per_lex_token": 3.021,
+ "case_bearing_tokens": 117483,
+ "case_number_cofused_rate": 1.0,
+ "corpus": "Vedic Sanskrit (UD_Sanskrit-Vedic, gold)",
+ "note": "Fusional pole. Zero MWT splitting; Case+Number+Gender fused onto single tokens."
+}

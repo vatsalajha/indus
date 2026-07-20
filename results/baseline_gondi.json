@@ -1,0 +1,40 @@
+{
+ "corpus": "Gondi (South-Central Dravidian) \u2014 descriptive placement",
+ "branch": "South-Central Dravidian (distinct from Tamil's South Dravidian)",
+ "gold_corpus_available": false,
+ "reason_no_rate": "No UD/annotated Gondi treebank exists; CGNetSwara parallel corpus has no morpheme segmentation. A running-text stacking rate comparable to the Tamil/Vedic gold numbers cannot be computed without fabrication.",
+ "documented_morphology": {
+  "type": "agglutinative",
+  "oblique_markers": [
+   "-d-",
+   "-t-",
+   "-n-",
+   "-\u1e6d-",
+   "-\u0278"
+  ],
+  "case_stacking": "stem + OBLIGATORY oblique + case (>=2 separable bound morphemes on every case-marked noun)",
+  "plural_suffixes": [
+   "-r",
+   "-ir",
+   "-ur"
+  ],
+  "gender_suffixes": {
+   "masc": [
+    "-a:l",
+    "-o:r"
+   ],
+   "fem": [
+    "-a:r"
+   ]
+  },
+  "word_order": "SOV, modifier-before-head"
+ },
+ "sources": [
+  "Krishnamurti, B. 2003. The Dravidian Languages. Cambridge UP (classifies all Dravidian, incl. Gondi, as agglutinative).",
+  "Grammar of Gondi as Spoken in the Betul District. Madras Govt Press, 1919.",
+  "Moss, C.F. 1950. An Introduction to the Grammar of the Gondi Language.",
+  "Pagdi, S.R. 1954. A Grammar of the Gondi Language."
+ ],
+ "separates_case_and_number": 1,
+ "placement": "agglutinative pole (same side as Tamil, opposite Vedic), established from descriptive grammar, not a running-text rate"
+}

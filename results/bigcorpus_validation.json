@@ -1,0 +1,35 @@
+{
+ "n_texts": 2511,
+ "n_tokens": 11109,
+ "n_signs": 583,
+ "mean_len": 4.42,
+ "hapax_frac": 0.331,
+ "jar_frequency_pct": 11.4,
+ "jar_terminal_rate": 0.335,
+ "suf_class_wells": [
+  "090",
+  "151",
+  "154",
+  "156",
+  "226",
+  "400",
+  "407",
+  "520",
+  "527",
+  "617",
+  "621",
+  "700",
+  "740"
+ ],
+ "suf_terminal_rate": 0.695,
+ "template_coverage": 0.714,
+ "template_shuffled": 0.273,
+ "template_p": 0.0,
+ "distinct_final_signs": 225,
+ "top5_ending_share": 0.59,
+ "pilot_comparison": {
+  "jar_freq": "10.1% (pilot) -> 11.4% (14x)",
+  "template": "75%/23% (pilot) -> 71%/27% (14x)",
+  "top5_enders": "71.4% (pilot) -> 59% (14x)"
+ }
+}

@@ -1,0 +1,1150 @@
+{
+ "committed_spec": {
+  "committed_before_dedr": true,
+  "roles": {
+   "GRAMMATICAL_SUFFIX": {
+    "predicts": "terminal>0.5 AND L/R>2.5",
+    "max": 2
+   },
+   "STEM_NOUN": {
+    "predicts": "0.35<=mean_pos<=0.70 AND stem_before_jar>0.10 AND terminal<0.3",
+    "max": 3
+   },
+   "COUNTED_NOUN": {
+    "predicts": "after_numeral>0.25 AND 0.3<=mean_pos<=0.7 AND terminal<0.3",
+    "max": 3
+   },
+   "NAME_ELEMENT": {
+    "predicts": "stem_before_jar>0.15 AND left_div>=3",
+    "max": 2
+   },
+   "OPENER": {
+    "predicts": "initial>0.35 AND terminal<0.1",
+    "max": 2
+   }
+  },
+  "validation": {
+   "P324_jar": "GRAMMATICAL_SUFFIX 2/2",
+   "P050_fish": "COUNTED_NOUN 3/3 (star WOUNDED)",
+   "P385_diamond": "OPENER 2/2"
+  },
+  "rule": "A rebus hypothesis SURVIVES only if the DEDR homophone meaning implies a role, AND the sign scores that role highest."
+ },
+ "validation": {
+  "fish_star_wounded": true,
+  "fish_top_role": "COUNTED_NOUN",
+  "note": "fish must score COUNTED_NOUN and the star->NAME_ELEMENT reading must NOT survive"
+ },
+ "results": [
+  {
+   "sign": "P324",
+   "object": "jar/pot",
+   "picture_confidence": "medium",
+   "literal_role": "COUNTED_NOUN",
+   "corpus_top_role": "GRAMMATICAL_SUFFIX",
+   "literal_consistent": false,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 1.0,
+    "STEM_NOUN": 0.0,
+    "COUNTED_NOUN": 0.0,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.0
+   },
+   "homophones": [
+    {
+     "dedr": 2176,
+     "headword": "ko\u0304ppu",
+     "meaning": "flowers)",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2177,
+     "headword": "ko\u0304yil",
+     "meaning": "king",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": "ko\u0304\u1e6di newly purchased cloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": "ko\u0304\u1e6dikam cloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": "ko\u0304\u1e6di new unbleached cloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": ") ko\u0304\u1e5bi loincloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2200,
+     "headword": "kuva\u1e6du",
+     "meaning": "branch of tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2200,
+     "headword": "kuva\u1e6du",
+     "meaning": "kuva\u1e6du branch of a tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "UNEXPLAINED"
+  },
+  {
+   "sign": "P086",
+   "object": "tree",
+   "picture_confidence": "medium",
+   "literal_role": "COUNTED_NOUN",
+   "corpus_top_role": "GRAMMATICAL_SUFFIX",
+   "literal_consistent": false,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 1.0,
+    "STEM_NOUN": 0.33,
+    "COUNTED_NOUN": 0.0,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.0
+   },
+   "homophones": [
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "fish",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "smell of flesh or fish",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pulaval smell of flesh or fish",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pora\u1e37\u016f fishy smell",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2176,
+     "headword": "ko\u0304ppu",
+     "meaning": "flowers)",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2177,
+     "headword": "ko\u0304yil",
+     "meaning": "king",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": "ko\u0304\u1e6di newly purchased cloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": "ko\u0304\u1e6dikam cloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "UNEXPLAINED"
+  },
+  {
+   "sign": "P050",
+   "object": "fish",
+   "picture_confidence": "high",
+   "literal_role": "COUNTED_NOUN",
+   "corpus_top_role": "COUNTED_NOUN",
+   "literal_consistent": true,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 0.67,
+    "COUNTED_NOUN": 1.0,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.5
+   },
+   "homophones": [
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016bl\u0101 red silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016b\u1e37a silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pora\u1e37\u016f fishy smell",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "skin of a jackfruit kernel",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "cugu\u1e37i rind of a fruit or vegetable",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "ceki\u1e37 skin or rind of fruit",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "fishscales",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "bb 1958) cegalo bark of tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "LITERAL-CONSISTENT"
+  },
+  {
+   "sign": "P062",
+   "object": "fish",
+   "picture_confidence": "high",
+   "literal_role": "COUNTED_NOUN",
+   "corpus_top_role": "COUNTED_NOUN",
+   "literal_consistent": true,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 0.67,
+    "COUNTED_NOUN": 1.0,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.5
+   },
+   "homophones": [
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016bl\u0101 red silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016b\u1e37a silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pora\u1e37\u016f fishy smell",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "skin of a jackfruit kernel",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "cugu\u1e37i rind of a fruit or vegetable",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "ceki\u1e37 skin or rind of fruit",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "fishscales",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "bb 1958) cegalo bark of tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "LITERAL-CONSISTENT"
+  },
+  {
+   "sign": "P060",
+   "object": "fish",
+   "picture_confidence": "high",
+   "literal_role": "COUNTED_NOUN",
+   "corpus_top_role": "COUNTED_NOUN",
+   "literal_consistent": true,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 0.67,
+    "COUNTED_NOUN": 1.0,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.5
+   },
+   "homophones": [
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016bl\u0101 red silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016b\u1e37a silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pora\u1e37\u016f fishy smell",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "skin of a jackfruit kernel",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "cugu\u1e37i rind of a fruit or vegetable",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "ceki\u1e37 skin or rind of fruit",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "fishscales",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "bb 1958) cegalo bark of tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": true
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "LITERAL-CONSISTENT"
+  },
+  {
+   "sign": "P217",
+   "object": "arrow/lance",
+   "picture_confidence": "low",
+   "literal_role": "STEM_NOUN",
+   "corpus_top_role": "GRAMMATICAL_SUFFIX",
+   "literal_consistent": false,
+   "top_role_score": 0.5,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.5,
+    "STEM_NOUN": 0.0,
+    "COUNTED_NOUN": 0.33,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.0
+   },
+   "homophones": [
+    {
+     "dedr": 237,
+     "headword": "alakku",
+     "meaning": "palm or bamboo leaf",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 238,
+     "headword": "alu",
+     "meaning": "(mercara) alu cowrie",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 255,
+     "headword": "cy\u016b\u1e5b\u0101",
+     "meaning": "alaku grains of paddy",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 255,
+     "headword": "cy\u016b\u1e5b\u0101",
+     "meaning": "ear of paddy or other grain",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 255,
+     "headword": "cy\u016b\u1e5b\u0101",
+     "meaning": "alkh\u1e5b\u0101 parched rice (h",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 5276,
+     "headword": "vallam, vallamai, vallai",
+     "meaning": "hero",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": false
+    },
+    {
+     "dedr": 5304,
+     "headword": "va\u1e47mai",
+     "meaning": "fruitfulness",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 5364,
+     "headword": "v\u0101l\u0101mai",
+     "meaning": "v\u0101litu that which is pure",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    }
+   ],
+   "surviving_rebus": [
+    {
+     "dedr": 5364,
+     "headword": "v\u0101l\u0101mai",
+     "meaning": "v\u0101litu that which is pure",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 5364,
+     "headword": "v\u0101l\u0101mai",
+     "meaning": "that which is white",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 5364,
+     "headword": "v\u0101l\u0101mai",
+     "meaning": "that which is good or excellent",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    }
+   ],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "LOW/MED-CONFIDENCE-PICTURE"
+  },
+  {
+   "sign": "P378",
+   "object": "wheel",
+   "picture_confidence": "medium",
+   "literal_role": "STEM_NOUN",
+   "corpus_top_role": "NAME_ELEMENT",
+   "literal_consistent": false,
+   "top_role_score": 0.5,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 0.33,
+    "COUNTED_NOUN": 0.33,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.5
+   },
+   "homophones": [
+    {
+     "dedr": 1298,
+     "headword": "kalla\u1e49",
+     "meaning": "ka\u1e49-) stone",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 1298,
+     "headword": "kalla\u1e49",
+     "meaning": "precious stone",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 1298,
+     "headword": "kalla\u1e49",
+     "meaning": "milestone",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 1298,
+     "headword": "kalla\u1e49",
+     "meaning": "kallu stone",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 1373,
+     "headword": "ka\u1e6dpu",
+     "meaning": "plucking off",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": true
+    },
+    {
+     "dedr": 1374,
+     "headword": "ka\u1e37i (-pp-, -tt-)",
+     "meaning": "-tt-) to be intoxicated",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 1374,
+     "headword": "ka\u1e37i (-pp-, -tt-)",
+     "meaning": "intoxication",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 1379,
+     "headword": "r\u0324",
+     "meaning": "( ya\u015bastilaka ) kali- sour rice-gruel",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [
+    {
+     "dedr": 1373,
+     "headword": "ka\u1e6dpu",
+     "meaning": "plucking off",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": true
+    }
+   ],
+   "celestial_name_reading_wounded": false,
+   "null_model_p": null,
+   "verdict": "LOW/MED-CONFIDENCE-PICTURE"
+  },
+  {
+   "sign": "P364",
+   "object": "tree",
+   "picture_confidence": "medium",
+   "literal_role": "COUNTED_NOUN",
+   "corpus_top_role": "STEM_NOUN",
+   "literal_consistent": false,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 1.0,
+    "COUNTED_NOUN": 1.0,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.5
+   },
+   "homophones": [
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "fish",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "smell of flesh or fish",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pulaval smell of flesh or fish",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pora\u1e37\u016f fishy smell",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2176,
+     "headword": "ko\u0304ppu",
+     "meaning": "flowers)",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2177,
+     "headword": "ko\u0304yil",
+     "meaning": "king",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": "ko\u0304\u1e6di newly purchased cloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2198,
+     "headword": "ko\u0304\u1e6dikam",
+     "meaning": "ko\u0304\u1e6dikam cloth",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "UNEXPLAINED"
+  },
+  {
+   "sign": "P011",
+   "object": "man",
+   "picture_confidence": "medium",
+   "literal_role": "STEM_NOUN",
+   "corpus_top_role": "OPENER",
+   "literal_consistent": false,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 0.33,
+    "COUNTED_NOUN": 0.67,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 1.0
+   },
+   "homophones": [
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "u demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": ") eke in that direction",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": "heke on that side ( voc",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 1139,
+     "headword": "u",
+     "meaning": "ka\u1e0d\u00efmbu\u1e6d\u1e6d\u00ef small ball of rice",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 5396,
+     "headword": "vi\u1e47\u1e6du",
+     "meaning": "vi\u1e47\u1e47avar gods",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": false
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is unprofitable",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is not necessary",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "UNEXPLAINED"
+  },
+  {
+   "sign": "P013",
+   "object": "man",
+   "picture_confidence": "medium",
+   "literal_role": "STEM_NOUN",
+   "corpus_top_role": "GRAMMATICAL_SUFFIX",
+   "literal_consistent": false,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 1.0,
+    "STEM_NOUN": 0.0,
+    "COUNTED_NOUN": 0.0,
+    "NAME_ELEMENT": 0.0,
+    "OPENER": 0.0
+   },
+   "homophones": [
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "u demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": ") eke in that direction",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": "heke on that side ( voc",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 1139,
+     "headword": "u",
+     "meaning": "ka\u1e0d\u00efmbu\u1e6d\u1e6d\u00ef small ball of rice",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 5396,
+     "headword": "vi\u1e47\u1e6du",
+     "meaning": "vi\u1e47\u1e47avar gods",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": false
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is unprofitable",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is not necessary",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    }
+   ],
+   "surviving_rebus": [
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "u demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": ") eke in that direction",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": "heke on that side ( voc",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is unprofitable",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is not necessary",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 4950,
+     "headword": "mutalvar",
+     "meaning": "that which is superior",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 3984,
+     "headword": "par",
+     "meaning": "appara that side",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    }
+   ],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "LOW/MED-CONFIDENCE-PICTURE"
+  },
+  {
+   "sign": "P073",
+   "object": "fish",
+   "picture_confidence": "low",
+   "literal_role": "COUNTED_NOUN",
+   "corpus_top_role": "STEM_NOUN",
+   "literal_consistent": false,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 1.0,
+    "COUNTED_NOUN": 0.67,
+    "NAME_ELEMENT": 1.0,
+    "OPENER": 0.5
+   },
+   "homophones": [
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016bl\u0101 red silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4378,
+     "headword": "p\u016bl\u0101",
+     "meaning": "p\u016b\u1e37a silk-cotton tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4552,
+     "headword": "pulaicu",
+     "meaning": "pora\u1e37\u016f fishy smell",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "skin of a jackfruit kernel",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2740,
+     "headword": "t\u016b\u1e37i",
+     "meaning": "cugu\u1e37i rind of a fruit or vegetable",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "ceki\u1e37 skin or rind of fruit",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "fishscales",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 2751,
+     "headword": "Kur.",
+     "meaning": "bb 1958) cegalo bark of tree",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "UNEXPLAINED"
+  },
+  {
+   "sign": "P194",
+   "object": "man",
+   "picture_confidence": "medium",
+   "literal_role": "STEM_NOUN",
+   "corpus_top_role": "STEM_NOUN",
+   "literal_consistent": true,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 0.0,
+    "STEM_NOUN": 1.0,
+    "COUNTED_NOUN": 1.0,
+    "NAME_ELEMENT": 1.0,
+    "OPENER": 0.5
+   },
+   "homophones": [
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "u demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 557,
+     "headword": "uvv",
+     "meaning": "demonstr",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": ") eke in that direction",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 764,
+     "headword": "Go.",
+     "meaning": "heke on that side ( voc",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 1139,
+     "headword": "u",
+     "meaning": "ka\u1e0d\u00efmbu\u1e6d\u1e6d\u00ef small ball of rice",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 5396,
+     "headword": "vi\u1e47\u1e6du",
+     "meaning": "vi\u1e47\u1e47avar gods",
+     "implied_role": "NAME_ELEMENT",
+     "matches_position": false
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is unprofitable",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    },
+    {
+     "dedr": 5454,
+     "headword": "v\u012b\u1e47a\u1e49",
+     "meaning": "that which is not necessary",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "LITERAL-CONSISTENT"
+  },
+  {
+   "sign": "P004",
+   "object": "man-carrying",
+   "picture_confidence": "medium",
+   "literal_role": "STEM_NOUN",
+   "corpus_top_role": "GRAMMATICAL_SUFFIX",
+   "literal_consistent": false,
+   "top_role_score": 1.0,
+   "role_scores": {
+    "GRAMMATICAL_SUFFIX": 1.0,
+    "STEM_NOUN": 0.0,
+    "COUNTED_NOUN": 0.33,
+    "NAME_ELEMENT": 0.5,
+    "OPENER": 0.0
+   },
+   "homophones": [
+    {
+     "dedr": 4271,
+     "headword": "",
+     "meaning": "pe\u1e47 bamboo milkpot",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 3984,
+     "headword": "par",
+     "meaning": "appara that side",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    },
+    {
+     "dedr": 4660,
+     "headword": "ma\u1e6d\u1e6d\u0101y",
+     "meaning": "ma\u1e6d\u1e6dam measure",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4661,
+     "headword": "ma\u1e6d\u1e6dai",
+     "meaning": "a variety of paddy (as inferior)",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4663,
+     "headword": "ma\u1e6dal",
+     "meaning": "ma\u1e6d\u1e6dai leaf-stalk of a fern or palm",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4663,
+     "headword": "ma\u1e6dal",
+     "meaning": "ma\u1e6dal flat leaf of palm",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4663,
+     "headword": "ma\u1e6dal",
+     "meaning": "jagged stem of a palmyra leaf",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    },
+    {
+     "dedr": 4663,
+     "headword": "ma\u1e6dal",
+     "meaning": "flower petal",
+     "implied_role": "COUNTED_NOUN",
+     "matches_position": false
+    }
+   ],
+   "surviving_rebus": [
+    {
+     "dedr": 3984,
+     "headword": "par",
+     "meaning": "appara that side",
+     "implied_role": "GRAMMATICAL_SUFFIX",
+     "matches_position": true
+    }
+   ],
+   "celestial_name_reading_wounded": true,
+   "null_model_p": null,
+   "verdict": "LOW/MED-CONFIDENCE-PICTURE"
+  }
+ ],
+ "survivors": []
+}

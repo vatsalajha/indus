@@ -1,0 +1,75 @@
+{
+ "register_caveat": "Seals are a formal register (name-tags), not running speech. Register reduces morphology independently of language family; morphological simplicity on seals is NOT by itself evidence of language change.",
+ "metrics": {
+  "stacking_rate": {
+   "status": "DISCRIMINATING",
+   "rows": [
+    [
+     "Vedic Sanskrit",
+     "Indo-Aryan (fusional)",
+     0.0,
+     "gold UD, 158k tokens"
+    ],
+    [
+     "Tamil",
+     "South Dravidian (aggl.)",
+     0.097,
+     "gold UD"
+    ],
+    [
+     "Gondi",
+     "S-C Dravidian (aggl.)",
+     null,
+     "descriptive only \u2014 no annotated corpus"
+    ],
+    [
+     "Indus mayig-179",
+     "\u2014",
+     0.08,
+     "CI [0.04, 0.126]"
+    ],
+    [
+     "Indus ICIT-2511",
+     "\u2014",
+     0.125,
+     "CI [0.112, 0.139]"
+    ]
+   ],
+   "reading": "Vedic 0.00 vs Tamil 0.10 separates the poles; Indus (0.08 / 0.125) sits at the Tamil pole, excludes Vedic. Gondi has no comparable rate (no annotated corpus)."
+  },
+  "separability": {
+   "status": "DISCRIMINATING (binary)",
+   "rows": [
+    [
+     "Vedic Sanskrit",
+     0,
+     "case+number+gender fused into one ending"
+    ],
+    [
+     "Tamil",
+     1,
+     "case/number separable"
+    ],
+    [
+     "Gondi",
+     1,
+     "obligatory stem+oblique+case stacking (descriptive)"
+    ],
+    [
+     "Indus",
+     1,
+     "each grammatical element a separate sign"
+    ]
+   ],
+   "reading": "Vedic fuses (0); Tamil, Gondi and Indus all separate (1). Confirms the axis is Dravidian-GENERAL, not Tamil-specific."
+  },
+  "fusion_density": {
+   "status": "UNINFORMATIVE",
+   "tamil_feats_per_token": 3.595,
+   "vedic_feats_per_token": 3.021,
+   "verdict": "UNINFORMATIVE: ~3 for both baselines; does not discriminate"
+  }
+ },
+ "gondi_contribution": "Gondi (a different, S-Central Dravidian branch) is agglutinative by descriptive grammar, so Indus at the agglutinative pole supports 'Dravidian' broadly, not merely 'Tamil-like'. BUT no gold Gondi rate exists, so the quantitative 'does Indus sit BETWEEN Tamil and Gondi' test the contact hypothesis needs CANNOT be run. Contact stays non-distinguishable from simple Dravidian on this evidence.",
+ "claim_ceiling": "Indus seal structure patterns with the agglutinative (Dravidian) baselines on the discriminating axis (separable case/number marking) and is inconsistent with a fully inflectional Indo-Aryan (Vedic) profile. It sits at the running-text stacking rate of gold Tamil, NOT reduced below it. The evidence cannot distinguish simple Dravidian from a Dravidian contact language, and assigns no sounds."
+}
