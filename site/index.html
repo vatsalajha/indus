@@ -353,6 +353,15 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 .trap p{font-size:14px;line-height:1.6;color:var(--indigo-soft)}
 .trap .chk{display:block;margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.02em;color:var(--faience)}
 @media(max-width:720px){.traps{grid-template-columns:1fr}}
+.oq{margin-top:26px;border-top:1px solid var(--line-soft)}
+.oq details{border-bottom:1px solid var(--line-soft)}
+.oq summary{cursor:pointer;list-style:none;padding:18px 2px;font-family:'Marcellus',serif;font-size:18px;color:var(--indigo);display:flex;justify-content:space-between;align-items:center;gap:14px}
+.oq summary::-webkit-details-marker{display:none}
+.oq summary::after{content:"+";font-family:'IBM Plex Mono',monospace;color:var(--carnelian);font-size:20px;flex:0 0 auto;transition:transform .2s ease}
+.oq details[open] summary::after{transform:rotate(45deg)}
+.oq .ans{padding:0 2px 20px;font-size:14.5px;line-height:1.65;color:var(--indigo-soft);max-width:72ch}
+.oq .ans b{color:var(--indigo)}
+.gloss{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.02em;color:var(--carnelian);margin-top:12px;max-width:62ch;line-height:1.6}
 @media(max-width:820px){.ledger{padding:28px 22px}.tl-take{padding:24px}.genetics{padding:24px}.approach-grid{grid-template-columns:1fr}.interstitial{height:44vh}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.seal-strip .glyph,.slotband,.wall .above .stone,.seal-row .glyph,.seal-step{opacity:1!important;transform:none!important;filter:none!important}}
 </style>
@@ -486,6 +495,7 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 <section id="wall"><div class="wrap">
 <div class="eyebrow reveal">03 · the honest edge</div>
 <h2 class="reveal">Where the evidence stops.</h2>
+<p class="gloss reveal">In plain terms: here is what our study can prove, and what no one can prove from seals alone.</p>
 <div class="wall reveal">
 <div class="above">
 <div class="stone">Rigid positional grammar, 75% vs 23% shuffled, replicated on 2,511 seals<span class="v">SURVIVES</span></div>
@@ -509,6 +519,7 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 <section id="rebus"><div class="wrap">
 <div class="eyebrow reveal">04 · the rebus trap</div>
 <h2 class="reveal">How a false decipherment is born.</h2>
+<p class="gloss reveal">In plain terms: watch a tempting reading take shape, then watch us break it on purpose.</p>
 <div class="rebus reveal" id="rebusBox">
 <div id="rebusGlyph" style="margin:0 auto 16px"></div>
 <div id="rebusText" style="max-width:620px;margin:0 auto;font-size:18px"></div>
@@ -572,6 +583,15 @@ figure.shot figcaption{font-family:'IBM Plex Mono',monospace;font-size:11px;colo
 <div class="story-imgs reveal">
 <figure class="shot"><img src="assets/img/street-life.jpg" loading="lazy" alt="A reconstructed Indus street with people walking past a covered brick drain"><figcaption>A living street, with its covered drain. Artist reconstruction.</figcaption></figure>
 <figure class="shot"><img src="assets/img/dockyard-busy.jpg" loading="lazy" alt="A reconstructed brick dockyard basin with moored boats and stacked cargo"><figcaption>The dockyard, where sealed cargo moved. Artist reconstruction.</figcaption></figure>
+</div>
+<h3 class="reveal" style="font-family:'Marcellus',serif;font-size:22px;margin-top:44px;color:var(--indigo)">Questions we love that we cannot fully answer.</h3>
+<div class="oq reveal">
+<details><summary>If they had no coins, how did they price things?</summary><div class="ans">Probably by <b>weight and trust</b>. The standardized stone weights let a trader in one city and a trader in another agree on quantities without a shared language or a currency. How value itself was reckoned, we do not know.</div></details>
+<details><summary>Did everyone write, or only a few?</summary><div class="ans">The seals cluster with <b>trade and administration</b>, so writing may have been the tool of a literate minority. Most people may never have written a sign. We cannot be sure.</div></details>
+<details><summary>Why no grand temples or royal tombs?</summary><div class="ans">Nobody has found them. The footprint looks <b>strikingly flat</b>: no palaces, no lavish burials, no monuments to a ruler. Whether that means shared power, hidden hierarchy, or something we have no word for is genuinely open.</div></details>
+<details><summary>What language did they speak at home?</summary><div class="ans">The structure points to the <b>Dravidian family</b>, but the sound is unknown, and across so vast an area there may have been <b>more than one language</b>. The script gives us a frame, not a voice.</div></details>
+<details><summary>Why did the writing stop and never return?</summary><div class="ans">The cities <b>de-urbanized</b> around 1900 BCE, and the script seems to have vanished with the administrative system that needed it. When writing returned to the subcontinent centuries later, it was a completely different system.</div></details>
+<details><summary>Was there one Indus people, or many?</summary><div class="ans">The area is enormous, so almost certainly <b>many</b>, with shared crafts and standards. "The Indus" is our label for a system, not necessarily a single people who would have called themselves one thing.</div></details>
 </div>
 </div></section>
 
